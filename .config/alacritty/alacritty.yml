@@ -1,0 +1,47 @@
+window:
+  padding:
+    x: 10
+    y: 10
+
+font:
+  size: 8.0
+  normal:
+    family: Fira Code #monospace #JetBrainsMono
+    style: Regular
+  bold:
+    family: Fira Code #monospace
+    style: Bold
+  italic:
+    family: Fira Code #monospace
+    style: Italic
+
+# Colors (Doom One)
+colors:
+  # Default colors
+  primary:
+    background: '#1e222a' #'#303742'
+    foreground: '#d1d5da'
+
+  # Normal colors
+  normal:
+    black: '#181a1f'
+    red: '#ff5768'
+    yellow: '#ffb347'
+    green: '#23d18b'
+    blue: '#55aaff'
+    magenta: '#a29bfe'
+    cyan: '#00cef1'
+    white: '#dedede'
+
+  # Bright colors
+  bright:
+    black: '#363A41'
+    red: '#E35161'
+    yellow: '#E3A144'
+    green: '#23BC7F'
+    blue: '#4F99E5'
+    magenta: '#928CE4'
+    cyan: '#04B9D9'
+    white: '#C6C7C8'
+
+theme: github_dark
