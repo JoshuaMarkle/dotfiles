@@ -19,51 +19,35 @@ theme.icons_file = "f"
 theme.font = "Fira Code 10"
 theme.useless_gap = 10
 theme.border_width = 2
+theme.border_radius = 8
 
-theme.background = "#1E1E2E"
-theme.crust = "#11111b"
-theme.text = "#cdd6f4"
-theme.subtext0 = "#a6adc8"
-theme.subtext1 = "#bac2de"
+theme.background = "#1e222a"
+theme.crust = "#303742"
+theme.text = "#dedede"
+theme.subtext0 = "#c6c7c8"
 
-theme.surface0 = "#313244"
-theme.surface1 = "#45475a"
-theme.surface2 = "#585b70"
-
-theme.overlay0 = "#6c7086"
-theme.overlay1 = "#7f849c"
-theme.overlay2 = "#9399b2"
-
-theme.blue = "#89b4fa"
-theme.lavender = "#b4befe"
-theme.sapphire = "#74c7ec"
-theme.sky = "#89dceb"
-theme.teal = "#94e2d5"
-theme.green = "#a6e3a1"
-theme.yellow = "#f9e2af"
-theme.peach = "#fab387"
-theme.maroon = "#eba0ac"
-theme.red = "#f38ba8"
-theme.mauve = "#cba6f7"
-theme.pink = "#f5c2e7"
-theme.flamingo = "#f2cdcd"
-theme.rosewater = "#f5e0dc"
-
+theme.blue = "#55aaff"
+theme.lavender = "#a29bfe"
+theme.cyan = "#00cef1"
+theme.green = "#23d18b"
+theme.yellow = "#ffff8b"
+theme.peach = "#ffb347"
+theme.red = "#ff5768"
 
 theme.bg_normal = theme.background
 theme.bg_focus = theme.crust
 theme.bg_urgent = theme.red
-theme.bg_minimize = theme.surface1
+theme.bg_minimize = theme.crust
 theme.bg_systray = theme.background
 
 theme.fg_normal = theme.text
 theme.fg_focus = theme.blue
-theme.fg_urgent = theme.red
-theme.fg_minimize = theme.pink
+theme.fg_urgent = theme.text
+theme.fg_minimize = theme.lavender
 
-theme.border_normal = theme.surface0
-theme.border_focus = theme.surface2
-theme.border_marked = theme.mauve
+theme.border_normal = theme.crust
+theme.border_focus = theme.blue
+theme.border_marked = theme.lavender
 
 -- Generate taglist squares:
 local taglist_square_size = dpi(10)
@@ -83,7 +67,7 @@ theme.notification_icon_size = dpi(60)
 -- notification_[border_color|border_width|shape|opacity]
 
 theme.menu_submenu_icon = ">"
-theme.menu_height = 18
-theme.menu_width = 140
+theme.menu_height = 20
+theme.menu_width = 160
 
 return theme

@@ -1,12 +1,7 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Configuration For Rofi Version: 1.7.3
- **/
-
 configuration {
+	width: 600;
+	lines: 5;
+	columns: 1;
 	/*---------- General setting ----------*/
 	modi: "drun,run,filebrowser,window";
 	case-sensitive: false;
@@ -83,7 +78,7 @@ configuration {
 
 	/*---------- Misc setting ----------*/
 	terminal: "rofi-sensible-terminal";
-	font: "Mono 12";
+	font: "Fira Code";
 	sort: false;
 	threads: 0;
 	click-to-exit: true;
@@ -100,7 +95,7 @@ configuration {
 	/*---------- Other settings ----------*/
     timeout {
       action: "kb-cancel";
-      delay:  0;
+      delay:  10;
     }
 
 	/*---------- Keybindings ----------*/

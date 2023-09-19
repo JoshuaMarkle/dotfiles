@@ -36,16 +36,16 @@ window {
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
-    background-color:            black / 10%;
+    background-color:            @background;
     cursor:                      "default";
 }
 
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     100px;
+    spacing:                     50px;
     margin:                      0px;
-    padding:                     100px 225px;
+    padding:                     150px 150px;
     border:                      0px solid;
     border-radius:               0px 0px 0px 0px;
     border-color:                @selected;
@@ -92,7 +92,7 @@ entry {
 listview {
     enabled:                     true;
     columns:                     8;
-    lines:                       4;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   false;

@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 49, opacity = 0.0 })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 40, opacity = 0.0 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -310,27 +310,30 @@ globalkeys = gears.table.join(
     -- Awesome
     awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "Awesome"}),
+    awful.key({ modkey }, "f", function () awful.spawn("alacritty --class AlacrittyFetch -e sh -c 'nitch; $SHELL'") end,
+              {description = "open a terminal w/ fetch", group = "Awesome"}),
     awful.key({ modkey,           }, "v", function() awful.spawn.with_shell("alacritty -e nvim") end,
               {description = "open nvim", group = "Awesome"}),
-    awful.key({ modkey,		  }, "b", function () awful.spawn(browser) end,
+    awful.key({ modkey,		      }, "b", function () awful.spawn(browser) end,
     	      {description = "open a browser", group = "Awesome"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "Awesome"}),
     awful.key({ modkey, "Shift"   }, "q", awesome.quit,
               {description = "quit awesome", group = "Awesome"}),
-    awful.key({ modkey, "Shift"   }, "m", function () awful.spawn.with_shell("bash ~/.local/bin/layout-switcher.sh") end,
+    awful.key({ modkey,           }, "space", function () awful.spawn.with_shell("bash ~/.local/bin/keyboard-layout.sh") end,
               {description = "switch keyboard layout", group = "Awesome"}),
 
     -- Rofi Menubar
     awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn_with_shell("bash ~/.config/rofi/launchers/type-1/launcher.sh") end,
               {description = "show rofi drun", group = "Menu"}),
-    awful.key({ modkey, "Shift"   }, "w", function() awful.util.spawn_with_shell("bash ~/.local/bin/rofi-wifi-menu.sh") end,
+    awful.key({ modkey, "Shift"   }, "w", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/rofi-wifi-menu.sh") end,
               {description = "show rofi wifi", group = "Menu"}),
     awful.key({ modkey, "Shift"   }, "v", function() awful.util.spawn_with_shell('rofi -modi emoji -show emoji') end,
               {description = "show rofi emoji", group = "Menu"}),
     awful.key({ modkey, "Shift"   }, "Escape", function() awful.util.spawn_with_shell("bash ~/.config/rofi/powermenu/type-2/powermenu.sh") end,
-              {description = "show rofi power", group = "Menu"})
-
+              {description = "show rofi power", group = "Menu"}),
+    awful.key({ modkey, "Shift"   }, "s", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/screenshot.sh") end,
+              { description = "show rofi screenshot", group = "Menu"})
 )
 
 clientkeys = gears.table.join(
@@ -455,33 +458,51 @@ awful.rules.rules = {
     -- Floating clients.
     { rule_any = {
         instance = {
-          "DTA",  -- Firefox addon DownThemAll.
-          "copyq",  -- Includes session name in class.
-          "pinentry",
+            "DTA",  -- Firefox addon DownThemAll.
+            "copyq",  -- Includes session name in class.
+            "pinentry",
         },
         class = {
-          "Arandr",
-          "Blueman-manager",
-          "Gpick",
-          "Kruler",
-          "MessageWin",  -- kalarm.
-          "Sxiv",
-          "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
-          "Wpa_gui",
-          "veromix",
-          "xtightvncviewer"},
+            "floating",
+            "Arandr",
+            "Blueman-manager",
+            "Gpick",
+            "Kruler",
+            "MessageWin",  -- kalarm.
+            "Sxiv",
+            "Tor Browser", -- Needs a fixed window size to avoid fingerprinting by screen size.
+            "Wpa_gui",
+            "veromix",
+            "xtightvncviewer"},
 
         -- Note that the name property shown in xprop might be set slightly after creation of the client
         -- and the name shown there might not match defined rules here.
         name = {
-          "Event Tester",  -- xev.
+            "Event Tester",  -- xev.
         },
         role = {
-          "AlarmWindow",  -- Thunderbird's calendar.
-          "ConfigManager",  -- Thunderbird's about:config.
-          "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
+            "AlarmWindow",  -- Thunderbird's calendar.
+            "ConfigManager",  -- Thunderbird's about:config.
+            "pop-up",       -- e.g. Google Chrome's (detached) Developer Tools.
         }
-      }, properties = { floating = true }},
+      }, properties = { 
+          floating = true,
+          placement = awful.placement.centered,
+          width = 800,
+          height = 500,
+      }},
+
+    -- Alacritty Fetch Window
+    { rule_any = {
+        class = { "AlacrittyFetch" },
+      }, properties = { 
+          floating = true,
+          placement = awful.placement.centered,
+          width = 300,
+          height = 380,
+          ontop = true;
+      }},
+
 
     -- Add titlebars to normal clients and dialogs
     { rule_any = {type = { "normal", "dialog" }
@@ -491,11 +512,11 @@ awful.rules.rules = {
     { rule_any = { class = { "Polybar" } } }, 
     properties = { size_hints_honor = false,
                    border_width = 0,
-                   above = true,
+                   --above = true,
                    focusable = false,
                    skip_taskbar = true,
-                   ontop = true,
-                   height = 18 }                    
+                   --ontop = true,
+                   height = 40 }                    
 }
 
 -- }}}
@@ -565,11 +586,11 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 
 -- Round the corners for the windows
---client.connect_signal("manage", function (c)
---    c.shape = function(cr,w,h)
---        gears.shape.rounded_rect(cr,w,h,5)
---    end
---end)
+client.connect_signal("manage", function (c)
+    c.shape = function(cr,w,h)
+        gears.shape.rounded_rect(cr,w,h,8)
+    end
+end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
@@ -577,9 +598,13 @@ awful.util.spawn_with_shell("nitrogen ~/Downloads/abstract-lines-wallpaper.jpg -
 
 -- Start applications
 -- awful.util.spawn_with_shell("picom --config ~/.config/picom/picom.conf &")
-awful.util.spawn_with_shell("polybar bar1")
-awful.util.spawn_with_shell("polybar bar2")
+-- awful.util.spawn_with_shell("polybar bar1")
+--awful.util.spawn_with_shell("polybar bar2")
 --awful.util.spawn_with_shell("polybar bar3")
-awful.util.spawn_with_shell("polybar bar4")
-awful.util.spawn_with_shell("polybar bar5")
-awful.util.spawn_with_shell("picom")
+-- awful.util.spawn_with_shell("polybar bar4")
+-- awful.util.spawn_with_shell("polybar bar5")
+awful.util.spawn_with_shell("polybar longbar")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250")
+
+-- Switch Keyboard Layout to Dvorak
+awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")
