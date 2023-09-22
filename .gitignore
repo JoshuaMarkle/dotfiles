@@ -14,20 +14,21 @@ lesshst
 /.ssh
 .viminfo
 /.vscode-oss
-.wget-hsts
-.zsh_history
 
 .RData
 .Rhistory
 .Xauthority
+.zsh_history
 .bash_history
 .bash_logout
 .cache/
 .histfile
 .lesshst
+.wget-hsts
 
 /.config/nvim/
 /.config/nvim-astro/
+/.config/zsh/.zsh_history
 /.config/libreoffice/
 /.config/rstudio
 /.config/Code - OSS
