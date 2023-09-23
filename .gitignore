@@ -5,35 +5,35 @@
 /R
 /yay
 
-/.jupyter
-/.ipython
-lesshst
 /.local
+/.cache
+/.ssh
 /.mozilla
 /.pki
-/.ssh
-.viminfo
+/.jupyter
+/.ipython
 /.vscode-oss
 
+/.config/nvim
+/.config/nvim-astro
+/.config/zsh/.zsh_history
+/.config/libreoffice
+/.config/rstudio
+/.config/Code - OSS
+/.config/gtk-3.0
+/.config/systemd
+
+lesshst
 .RData
 .Rhistory
 .Xauthority
 .zsh_history
 .bash_history
 .bash_logout
-.cache/
 .histfile
 .lesshst
 .wget-hsts
+.viminfo
 
-/.config/nvim/
-/.config/nvim-astro/
-/.config/zsh/.zsh_history
-/.config/libreoffice/
-/.config/rstudio
-/.config/Code - OSS
-/.config/gtk-3.0
-/.config/systemd
-
-GITHUBKEY
 .gitconfig
+GITHUBKEY
