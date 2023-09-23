@@ -33,6 +33,7 @@ lesshst
 /.config/rstudio
 /.config/Code - OSS
 /.config/gtk-3.0
+/.config/systemd
 
 GITHUBKEY
 .gitconfig
