@@ -3,6 +3,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export TERM=xterm-256color
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export ZDOTDIR="$HOME/.config/zsh"
