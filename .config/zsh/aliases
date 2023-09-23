@@ -1,7 +1,6 @@
 alias volume='pactl -- set-sink-volume 0 '
 
 alias la='ls -A'
-
 alias fetch='nitch'
 
 alias school='~/School'
