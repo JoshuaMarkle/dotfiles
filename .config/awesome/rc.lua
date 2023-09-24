@@ -594,7 +594,7 @@ end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/Downloads/abstract-lines-wallpaper.jpg --set-zoom-fill")
+awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/dark/Wallpaper.jpg --set-zoom-fill")
 
 -- Start applications
 -- awful.util.spawn_with_shell("picom --config ~/.config/picom/picom.conf &")
