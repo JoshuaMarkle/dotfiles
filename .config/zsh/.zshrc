@@ -4,7 +4,9 @@
 export TERM=xterm-256color
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
 export ZDOTDIR="$HOME/.config/zsh"
+export TEXMFVAR="/var/lib/texmf"
 
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"

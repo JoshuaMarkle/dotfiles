@@ -22,6 +22,8 @@
 /.config/Code - OSS
 /.config/gtk-3.0
 /.config/systemd
+/.config/pulse
+/.config/inkscape
 
 lesshst
 .RData

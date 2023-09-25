@@ -6,10 +6,12 @@
 export TERM=xterm-256color
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+
 export ZDOTDIR="$HOME/.config/zsh"
+export TEXMFVAR="/var/lib/texmf"
 
 alias ls='ls --color=auto'
-alias la='la -A'
+alias la='la -A --color=auto'
 alias grep='grep --color=auto'
 
 alias fetch='nitch'
