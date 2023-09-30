@@ -20,6 +20,8 @@
 /.pub-cache/
 /.python_history
 /android-sdk/
+/.dart/
+/.dartServer/
 
 /.config/nvim
 /.config/nvim-astro
