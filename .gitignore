@@ -1,6 +1,6 @@
-/Downloads
-/School
-/Projects
+/downloads
+/school
+/projects
 /ly
 /R
 /yay
@@ -13,6 +13,13 @@
 /.jupyter
 /.ipython
 /.vscode-oss
+/.android/
+/.config/flutter/
+/.dart-tool/
+/.flutter
+/.pub-cache/
+/.python_history
+/android-sdk/
 
 /.config/nvim
 /.config/nvim-astro

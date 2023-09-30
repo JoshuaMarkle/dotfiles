@@ -1,6 +1,8 @@
 alias volume='pactl -- set-sink-volume 0 '
 
-alias la='ls -A'
+alias ls='exa --icons --color=auto'
+alias la='exa -A --icons --color=auto'
+alias lt='exa --icons --tree'
 alias fetch='nitch'
 
 alias school='~/School'

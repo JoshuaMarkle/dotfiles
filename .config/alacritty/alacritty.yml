@@ -4,15 +4,15 @@ window:
     y: 10
 
 font:
-  size: 8.0
+  size: 9.5
   normal:
-    family: Fira Code #monospace #JetBrainsMono
+    family: CaskaydiaCoveNerdFont
     style: Regular
   bold:
-    family: Fira Code #monospace
+    family: CaskaydiaCoveNerdFont
     style: Bold
   italic:
-    family: Fira Code #monospace
+    family: CaskaydiaCoveNerdFont
     style: Italic
 
 # Colors (Doom One)

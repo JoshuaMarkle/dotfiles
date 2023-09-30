@@ -8,6 +8,11 @@ export EDITOR="$VISUAL"
 export ZDOTDIR="$HOME/.config/zsh"
 export TEXMFVAR="/var/lib/texmf"
 
+# Flutter Support
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/usr/bin/java
+
 plug "zsh-users/zsh-autosuggestions"
 plug "zap-zsh/supercharge"
 #plug "zap-zsh/zap-prompt"
@@ -17,6 +22,7 @@ plug "zsh-users/zsh-syntax-highlighting"
 autoload -Uz compinit
 compinit
 
+# Add aliases
 source ~/.config/zsh/aliases
 
 PROMPT="%B%F{red}%n@%m: %B%F{blue}%~%b %F{foreground}> "

@@ -10,11 +10,11 @@ export EDITOR="$VISUAL"
 export ZDOTDIR="$HOME/.config/zsh"
 export TEXMFVAR="/var/lib/texmf"
 
-alias ls='ls --color=auto'
-alias la='la -A --color=auto'
-alias grep='grep --color=auto'
+# Flutter Support
+export ANDROID_HOME=$HOME/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
-alias fetch='nitch'
-alias workspace='bash ~/.local/bin/setup-workspace.sh'
+source ~/.config/zsh/aliases
 
 export PS1='\[\e[1;34m\]\u@\h: \[\e[1;34m\]\w\[\e[0m\] > '
