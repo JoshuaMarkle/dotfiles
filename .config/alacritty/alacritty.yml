@@ -15,9 +15,8 @@ font:
     family: CaskaydiaCoveNerdFont
     style: Italic
 
-# Colors (Doom One)
+# Colors
 colors:
-  # Default colors
   primary:
     background: '#1e222a' #'#303742'
     foreground: '#d1d5da'

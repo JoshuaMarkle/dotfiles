@@ -17,4 +17,4 @@ export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
 source ~/.config/zsh/aliases
 
-export PS1='\[\e[1;34m\]\u@\h: \[\e[1;34m\]\w\[\e[0m\] > '
+export PS1='\[\e[1;34m\]\u@\h: \[\e[1;34m\]\w\[\e[0m\] ❱ '

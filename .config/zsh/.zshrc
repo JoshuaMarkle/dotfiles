@@ -25,4 +25,4 @@ compinit
 # Add aliases
 source ~/.config/zsh/aliases
 
-PROMPT="%B%F{red}%n@%m: %B%F{blue}%~%b %F{foreground}> "
+PROMPT="%B%F{red}%n@%m: %B%F{blue}%~%b %F{foreground}❱ "
