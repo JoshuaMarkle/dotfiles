@@ -24,6 +24,8 @@
 /android-sdk/
 /.dart/
 /.dartServer/
+/.emacs.d
+/.texlive
 
 /.config/nvim
 /.config/nvim-astro
@@ -35,6 +37,7 @@
 /.config/systemd
 /.config/pulse
 /.config/inkscape
+.config/dconf/user
 
 lesshst
 .RData
