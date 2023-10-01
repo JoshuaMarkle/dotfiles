@@ -11,32 +11,29 @@ def env(name):
 
 endglobal
 
-
 snippet template "Basic template" b
-\documentclass[a4paper]{article}
+\documentclass{article}
 
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage{textcomp}
-\usepackage[dutch]{babel}
-\usepackage{amsmath, amssymb}
+\usepackage[skins]{tcolorbox}
 
-
-% figure support
-\usepackage{import}
-\usepackage{xifthen}
-\pdfminorversion=7
-\usepackage{pdfpages}
-\usepackage{transparent}
-\newcommand{\incfig}[1]{%
-	\def\svgwidth{\columnwidth}
-	\import{./figures/}{#1.pdf_tex}
+\newtcolorbox{theorem}[2][]{%
+	enhanced,colback=white,colframe=black,coltitle=black,
+	boxrule=1pt,	
+	fonttitle=\bfseries,
+	attach boxed title to top left={yshift=-0.5\baselineskip-0.4pt,xshift=5mm},
+	boxed title style={tile,size=minimal,left=1mm,right=1.5mm,colback=white,before upper=\strut},
+	title=#2,#1
 }
 
-\pdfsuppresswarningpagegroup=1
+\title{$1}
+\author{Joshua Markle}
 
 \begin{document}
+
+\maketitle
+
 	$0
+
 \end{document}
 endsnippet
 
@@ -44,6 +41,12 @@ snippet beg "begin{} / end{}" bA
 \\begin{$1}
 	$0
 \\end{$1}
+endsnippet
+
+snippet titledbox "titledbox" bA
+\begin{titledbox}{$1}
+	$0
+\end{titledbox}
 endsnippet
 
 priority 100
@@ -229,6 +232,11 @@ endsnippet
 context "math()"
 snippet () "left( right)" iA
 \left( ${1:${VISUAL}} \right) $0
+endsnippet
+
+context "math()"
+snippet <> "long <>" iA
+\langle ${1:${VISUAL}} \rangle
 endsnippet
 
 snippet lr "left( right)" i
@@ -567,11 +575,6 @@ snippet <! "normal" iA
 \triangleleft 
 endsnippet
 
-snippet <> "hokje" iA
-\diamond 
-endsnippet
-
-
 context "math()"
 snippet '(?<!i)sts' "text subscript" irA
 _\text{$1} $0
@@ -628,10 +631,13 @@ snippet "([a-zA-Z])hat" "hat" riA
 \hat{`!p snip.rv=match.group(1)`}
 endsnippet
 
+snippet "(\\?\w+)(,\.|\.,)" "Vector postfix" riA
+\vec{`!p snip.rv=match.group(1)`}
+endsnippet 
+
 snippet letw "let omega" iA
 Let $\Omega \subset \C$ be open.
 endsnippet
-
 
 snippet HH "H" iA
 \mathbb{H}
