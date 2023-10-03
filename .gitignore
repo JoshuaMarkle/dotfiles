@@ -27,6 +27,7 @@
 /.emacs.d
 /.texlive
 
+.config
 /.config/nvim
 /.config/nvim-astro
 /.config/zsh/.zsh_history
