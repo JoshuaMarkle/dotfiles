@@ -6,9 +6,6 @@ export ZDOTDIR="$HOME/.config/zsh"
 export ZSH="$ZDOTDIR/ohmyzsh"
 export TEXMFVAR="/var/lib/texmf"
 
-# Lazy load zsh plugins
-source $ZDOTDIR/zsh-defer/zsh-defer.plugin.zsh
-
 # Flutter Support
 export ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
