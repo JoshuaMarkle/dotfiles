@@ -1,12 +1,4 @@
 alias volume='pactl -- set-sink-volume 0 '
 
-alias ls='exa --icons --color=auto'
-alias la='exa -A --icons --color=auto'
-alias lt='exa --icons --tree'
-alias fetch='nitch'
-
-alias doom='bash /home/josh/.config/emacs/bin/doom'
-alias school='~/School'
-alias school-jupyter='cd ~/School/Scripts/Jupyter; jupyter notebook'
 alias rstudio='sudo /usr/lib/rstudio/rstudio --no-sandbox'
 alias githubkey='bash ~/.local/bin/copy-githubkey.sh'
