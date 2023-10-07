@@ -57,7 +57,7 @@ terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nvim"
 editor_cmd = terminal .. " -e " .. editor
 browser = "firefox"
-music = "spotify-launcher"
+music = "alacritty spotify-tui"
 
 -- Default modkey.
 -- Usually, Mod4 is the key with a logo between Control and Alt.
@@ -269,75 +269,75 @@ root.buttons(gears.table.join(
 
 -- {{{ Key bindings
 globalkeys = gears.table.join(
-    awful.key({ modkey,           }, "o",      hotkeys_popup.show_help,
+    awful.key({ modkey, }, "o", hotkeys_popup.show_help,
               {description="show help", group="Awesome"}),
-    awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
+    awful.key({ modkey, }, "Left", awful.tag.viewprev,
               {description = "view previous", group = "Awesome"}),
-    awful.key({ modkey,           }, "Right",  awful.tag.viewnext,
+    awful.key({ modkey, }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "Awesome"}),
-    awful.key({ modkey,           }, "t", function () awful.client.focus.byidx(1) end,
+    awful.key({ modkey, }, "t", function () awful.client.focus.byidx(1) end,
               {description = "focus next by index", group = "Client"}),
-    awful.key({ modkey,           }, "h", function () awful.client.focus.byidx(-1) end,
+    awful.key({ modkey, }, "h", function () awful.client.focus.byidx(-1) end,
               {description = "focus previous by index", group = "Client"}),
-    awful.key({ modkey,           }, ",", function () mymainmenu:show() end,
+    awful.key({ modkey, }, ",", function () mymainmenu:show() end,
               {description = "show awesome menu", group = "Awesome"}),
 
     -- Client
-    awful.key({ modkey, "Shift"   }, "h", function () awful.client.swap.byidx(  1)    end,
+    awful.key({ modkey, "Shift" }, "h", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "Client"}),
-    awful.key({ modkey, "Shift"   }, "t", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift" }, "t", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "Client"}),
-    awful.key({ modkey,           }, "g", awful.client.urgent.jumpto,
+    awful.key({ modkey, }, "g", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "Client"}),
 
 
     -- Layout
-    awful.key({ modkey,           }, "n",     function () awful.tag.incmwfact( 0.05)          end,
+    awful.key({ modkey, }, "n", function () awful.tag.incmwfact( 0.05)          end,
               {description = "increase master width factor", group = "Layout"}),
-    awful.key({ modkey,           }, "d",     function () awful.tag.incmwfact(-0.05)          end,
+    awful.key({ modkey, }, "d", function () awful.tag.incmwfact(-0.05)          end,
               {description = "decrease master width factor", group = "Layout"}),
-    awful.key({ modkey, "Shift"   }, "d",     function () awful.tag.incnmaster( 1, nil, true) end,
+    awful.key({ modkey, "Shift" }, "d", function () awful.tag.incnmaster( 1, nil, true) end,
               {description = "increase the number of master clients", group = "Layout"}),
-    awful.key({ modkey, "Shift"   }, "n",     function () awful.tag.incnmaster(-1, nil, true) end,
+    awful.key({ modkey, "Shift" }, "n", function () awful.tag.incnmaster(-1, nil, true) end,
               {description = "decrease the number of master clients", group = "Layout"}),
-    awful.key({ modkey, "Control" }, "d",     function () awful.tag.incncol( 1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "d", function () awful.tag.incncol( 1, nil, true)    end,
               {description = "increase the number of columns", group = "Layout"}),
-    awful.key({ modkey, "Control" }, "n",     function () awful.tag.incncol(-1, nil, true)    end,
+    awful.key({ modkey, "Control" }, "n", function () awful.tag.incncol(-1, nil, true)    end,
               {description = "decrease the number of columns", group = "Layout"}),
-    awful.key({ modkey, "Shift"   }, "space", function () awful.layout.inc(-1)                end,
+    awful.key({ modkey, "Shift" }, "space", function () awful.layout.inc(-1)                end,
               {description = "select previous", group = "Layout"}),
 
     -- Awesome
-    awful.key({ modkey,           }, "Return", function () awful.spawn(terminal) end,
+    awful.key({ modkey, }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "Awesome"}),
-    awful.key({ modkey }, "f", function () awful.spawn("alacritty --class AlacrittyFetch -e sh -c 'nitch; $SHELL'") end,
+    awful.key({ modkey, }, "f", function () awful.spawn("alacritty --class AlacrittyFetch -e sh -c 'nitch; $SHELL'") end,
               {description = "open a terminal w/ fetch", group = "Awesome"}),
-    awful.key({ modkey,           }, "v", function() awful.spawn.with_shell("alacritty -e nvim") end,
+    awful.key({ modkey, }, "v", function() awful.spawn.with_shell("alacritty -e nvim") end,
               {description = "open nvim", group = "Awesome"}),
-    awful.key({ modkey,		      }, "b", function () awful.spawn(browser) end,
+    awful.key({ modkey, }, "b", function () awful.spawn(browser) end,
     	      {description = "open a browser", group = "Awesome"}),
     awful.key({ modkey, "Control" }, "r", awesome.restart,
               {description = "reload awesome", group = "Awesome"}),
-    awful.key({ modkey, "Shift"   }, "q", awesome.quit,
+    awful.key({ modkey, "Shift" }, "q", awesome.quit,
               {description = "quit awesome", group = "Awesome"}),
-    awful.key({ modkey,           }, "space", function () awful.spawn.with_shell("bash ~/.local/bin/keyboard-layout.sh") end,
+    awful.key({ modkey, }, "space", function () awful.spawn.with_shell("bash ~/.local/bin/keyboard-layout.sh") end,
               {description = "switch keyboard layout", group = "Awesome"}),
 
     -- Rofi Menubar
-    awful.key({ modkey, "Shift"   }, "Return", function() awful.util.spawn_with_shell("bash ~/.config/rofi/launchers/type-1/launcher.sh") end,
+    awful.key({ modkey, "Shift" }, "Return", function() awful.util.spawn_with_shell("bash ~/.config/rofi/launchers/type-1/launcher.sh") end,
               {description = "show rofi drun", group = "Menu"}),
-    awful.key({ modkey, "Shift"   }, "w", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/rofi-wifi-menu.sh") end,
+    awful.key({ modkey, "Shift" }, "w", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/rofi-wifi-menu.sh") end,
               {description = "show rofi wifi", group = "Menu"}),
-    awful.key({ modkey, "Shift"   }, "v", function() awful.util.spawn_with_shell('rofi -modi emoji -show emoji') end,
+    awful.key({ modkey, "Shift" }, "v", function() awful.util.spawn_with_shell('rofi -modi emoji -show emoji') end,
               {description = "show rofi emoji", group = "Menu"}),
-    awful.key({ modkey, "Shift"   }, "Escape", function() awful.util.spawn_with_shell("bash ~/.config/rofi/powermenu/type-2/powermenu.sh") end,
+    awful.key({ modkey, "Shift" }, "Escape", function() awful.util.spawn_with_shell("bash ~/.config/rofi/powermenu/type-2/powermenu.sh") end,
               {description = "show rofi power", group = "Menu"}),
-    awful.key({ modkey, "Shift"   }, "s", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/screenshot.sh") end,
+    awful.key({ modkey, "Shift" }, "s", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/screenshot.sh") end,
               { description = "show rofi screenshot", group = "Menu"})
 )
 
 clientkeys = gears.table.join(
-    awful.key({ modkey,           }, "f",
+    awful.key({ modkey, }, "f",
         function (c)
             c.fullscreen = not c.fullscreen
             c:raise()
