@@ -1,0 +1,46 @@
+window:
+  padding:
+    x: 10
+    y: 10
+
+font:
+  size: 9.5
+  normal:
+    family: CaskaydiaCoveNerdFont
+    style: Regular
+  bold:
+    family: CaskaydiaCoveNerdFont
+    style: Bold
+  italic:
+    family: CaskaydiaCoveNerdFont
+    style: Italic
+
+# Colors
+colors:
+  primary:
+    background: '#1e222a' #'#303742'
+    foreground: '#d1d5da'
+
+  # Normal colors
+  normal:
+    black: '#303742'
+    red: '#ff5768'
+    yellow: '#ffb347'
+    green: '#23d18b'
+    blue: '#55aaff'
+    magenta: '#a29bfe'
+    cyan: '#00cef1'
+    white: '#dedede'
+
+  # Bright colors
+  bright:
+    black: '#363A41'
+    red: '#E35161'
+    yellow: '#E3A144'
+    green: '#23BC7F'
+    blue: '#4F99E5'
+    magenta: '#928CE4'
+    cyan: '#04B9D9'
+    white: '#C6C7C8'
+
+theme: github_dark

@@ -1,0 +1,12 @@
+[colors]
+background = #1e222a
+buffer = #303742
+foreground = #dedede
+dim = #c6c7c8
+blue = #55aaff
+warning = #ff5768
+notify = #ffb347
+success = #23d18b
+function = #a29bfe
+transparent = #00000000
+

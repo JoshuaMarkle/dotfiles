@@ -50,7 +50,7 @@ end
 
 -- {{{ Variable definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/dark/theme.lua")
+beautiful.init("~/.config/awesome/themes/ayu/theme.lua")
 
 -- This is used later as the default terminal and editor to run.
 terminal = "alacritty"
@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 40, opacity = 0.0 })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 35, opacity = 0.0 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -516,7 +516,7 @@ awful.rules.rules = {
                    focusable = false,
                    skip_taskbar = true,
                    --ontop = true,
-                   height = 40 }                    
+                   height = 35 }                    
 }
 
 -- }}}
@@ -588,13 +588,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Round the corners for the windows
 client.connect_signal("manage", function (c)
     c.shape = function(cr,w,h)
-        gears.shape.rounded_rect(cr,w,h,8)
+        gears.shape.rounded_rect(cr,w,h,12)
     end
 end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/dark/Wallpaper.jpg --set-zoom-fill")
+awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg --set-zoom-fill")
 
 -- Start applications
 -- awful.util.spawn_with_shell("picom --config ~/.config/picom/picom.conf &")

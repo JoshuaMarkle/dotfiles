@@ -15,32 +15,139 @@ font:
     family: CaskaydiaCoveNerdFont
     style: Italic
 
-# Colors
+schemes:
+  ayu_dark: &ayu_dark
+    primary:
+      background: '#0A0E14'
+      foreground: '#B3B1AD'
+    normal:
+      black:   '#01060E'
+      red:     '#EA6C73'
+      green:   '#91B362'
+      yellow:  '#F9AF4F'
+      blue:    '#53BDFA'
+      magenta: '#FAE994'
+      cyan:    '#90E1C6'
+      white:   '#C7C7C7'
+    bright:
+      black:   '#686868'
+      red:     '#F07178'
+      green:   '#C2D94C'
+      yellow:  '#FFB454'
+      blue:    '#59C2FF'
+      magenta: '#FFEE99'
+      cyan:    '#95E6CB'
+      white:   '#FFFFFF'
+    # Dim colors
+    dim:
+        black: "#45475A" # surface1
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#BAC2DE" # subtext1
+  ayu_mirage: &ayu_mirage
+    primary:
+      background: '#1f2430'
+      foreground: '#d9d7ce'
+    normal:
+      black:   '#191e2a'
+      red:     '#ed8274'
+      green:   '#a6cc70'
+      yellow:  '#fad07b'
+      blue:    '#6dcbfa'
+      magenta: '#cfbafa'
+      cyan:    '#90e1c6'
+      white:   '#c7c7c7'
+    bright:
+      black:   '#686868'
+      red:     '#f28779'
+      green:   '#bae67e'
+      yellow:  '#ffd580'
+      blue:    '#73d0ff'
+      magenta: '#d4bfff'
+      cyan:    '#95e6cb'
+      white:   '#ffffff'
+
 colors:
-  primary:
-    background: '#1e222a' #'#303742'
-    foreground: '#d1d5da'
+    primary:
+        background: "#1E1E22" # base
+        foreground: "#CDD6E4" # text
+        # Bright and dim foreground colors
+        dim_foreground: "#CDD6F4" # text
+        bright_foreground: "#CDD6F4" # text
 
-  # Normal colors
-  normal:
-    black: '#303742'
-    red: '#ff5768'
-    yellow: '#ffb347'
-    green: '#23d18b'
-    blue: '#55aaff'
-    magenta: '#a29bfe'
-    cyan: '#00cef1'
-    white: '#dedede'
+    # Cursor colors
+    cursor:
+        text: "#1E1E2E" # base
+        cursor: "#F5E0DC" # rosewater
+    vi_mode_cursor:
+        text: "#1E1E2E" # base
+        cursor: "#B4BEFE" # lavender
 
-  # Bright colors
-  bright:
-    black: '#363A41'
-    red: '#E35161'
-    yellow: '#E3A144'
-    green: '#23BC7F'
-    blue: '#4F99E5'
-    magenta: '#928CE4'
-    cyan: '#04B9D9'
-    white: '#C6C7C8'
+    # Search colors
+    search:
+        matches:
+            foreground: "#1E1E2E" # base
+            background: "#A6ADC8" # subtext0
+        focused_match:
+            foreground: "#1E1E2E" # base
+            background: "#A6E3A1" # green
+        footer_bar:
+            foreground: "#1E1E2E" # base
+            background: "#A6ADC8" # subtext0
 
-theme: github_dark
+    # Keyboard regex hints
+    hints:
+        start:
+            foreground: "#1E1E2E" # base
+            background: "#F9E2AF" # yellow
+        end:
+            foreground: "#1E1E2E" # base
+            background: "#A6ADC8" # subtext0
+
+    # Selection colors
+    selection:
+        text: "#1E1E2E" # base
+        background: "#F5E0DC" # rosewater
+
+    # Normal colors
+    normal:
+        black: "#45475A" # surface1
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#BAC2DE" # subtext1
+
+    # Bright colors
+    bright:
+        black: "#585B70" # surface2
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#A6ADC8" # subtext0
+
+    # Dim colors
+    dim:
+        black: "#45475A" # surface1
+        red: "#F38BA8" # red
+        green: "#A6E3A1" # green
+        yellow: "#F9E2AF" # yellow
+        blue: "#89B4FA" # blue
+        magenta: "#F5C2E7" # pink
+        cyan: "#94E2D5" # teal
+        white: "#BAC2DE" # subtext1
+
+    indexed_colors:
+        - { index: 16, color: "#FAB387" }
+        - { index: 17, color: "#F5E0DC" }
+
+colors: *ayu_dark

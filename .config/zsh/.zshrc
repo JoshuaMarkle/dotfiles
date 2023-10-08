@@ -16,10 +16,6 @@ PROMPT="%B%F{red}%n@%m: %B%F{blue}%~%b %F{foreground}❱ "
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
-ZSH_DISABLE_COMPFIX=1
-
-# Auto-update behavior
-zstyle ':omz:update' mode reminder  # just remind me to update when it's time
 
 plugins=(
   # git
