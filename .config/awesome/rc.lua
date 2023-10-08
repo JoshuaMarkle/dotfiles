@@ -321,7 +321,9 @@ globalkeys = gears.table.join(
     awful.key({ modkey, "Shift" }, "q", awesome.quit,
               {description = "quit awesome", group = "Awesome"}),
     awful.key({ modkey, }, "space", function () awful.spawn.with_shell("bash ~/.local/bin/keyboard-layout.sh") end,
-              {description = "switch keyboard layout", group = "Awesome"}),
+              {description = "toggle keyboard layout", group = "Awesome"}),
+    awful.key({ }, "F4", function () awful.spawn.with_shell("bash ~/.local/bin/toggle-monitor.sh") end,
+              {description = "toggle monitor", group = "Awesome"}),
 
     -- Rofi Menubar
     awful.key({ modkey, "Shift" }, "Return", function() awful.util.spawn_with_shell("bash ~/.config/rofi/launchers/type-1/launcher.sh") end,
