@@ -231,7 +231,7 @@ awful.screen.connect_for_each_screen(function(s)
     }
 
     -- Create the wibox
-    s.mywibox = awful.wibar({ position = "top", screen = s, height = 35, opacity = 0.0 })
+    s.mywibox = awful.wibar({ position = "top", screen = s, height = 34, opacity = 0.0 })
 
     -- Add widgets to the wibox
     s.mywibox:setup {
@@ -275,7 +275,7 @@ globalkeys = gears.table.join(
               {description = "view previous", group = "Awesome"}),
     awful.key({ modkey, }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "Awesome"}),
-    awful.key({ modkey, }, "t", function () awful.client.focus.byidx(1) end,
+    awful.key({ modkey, }, "l", function () awful.client.focus.byidx(1) end,
               {description = "focus next by index", group = "Client"}),
     awful.key({ modkey, }, "h", function () awful.client.focus.byidx(-1) end,
               {description = "focus previous by index", group = "Client"}),
@@ -285,7 +285,7 @@ globalkeys = gears.table.join(
     -- Client
     awful.key({ modkey, "Shift" }, "h", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "Client"}),
-    awful.key({ modkey, "Shift" }, "t", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift" }, "l", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "Client"}),
     awful.key({ modkey, }, "g", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "Client"}),
@@ -322,8 +322,16 @@ globalkeys = gears.table.join(
               {description = "quit awesome", group = "Awesome"}),
     awful.key({ modkey, }, "space", function () awful.spawn.with_shell("bash ~/.local/bin/keyboard-layout.sh") end,
               {description = "toggle keyboard layout", group = "Awesome"}),
+
+		-- F(unction) Keys
     awful.key({ }, "F4", function () awful.spawn.with_shell("bash ~/.local/bin/toggle-monitor.sh") end,
-              {description = "toggle monitor", group = "Awesome"}),
+              {description = "toggle monitor", group = "Function"}),
+    awful.key({ }, "F6", function () awful.spawn.with_shell("pactl set-sink-mute @DEFAULT_SINK@ toggle") end,
+              {description = "toggle mute", group = "Function"}),
+    awful.key({ }, "F7", function () awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ -10%") end,
+              {description = "decrease volume", group = "Function"}),
+    awful.key({ }, "F8", function () awful.spawn.with_shell("pactl set-sink-volume @DEFAULT_SINK@ +10%") end,
+              {description = "increase volume", group = "Function"}),
 
     -- Rofi Menubar
     awful.key({ modkey, "Shift" }, "Return", function() awful.util.spawn_with_shell("bash ~/.config/rofi/launchers/type-1/launcher.sh") end,
@@ -590,23 +598,19 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- Round the corners for the windows
 client.connect_signal("manage", function (c)
     c.shape = function(cr,w,h)
-        gears.shape.rounded_rect(cr,w,h,12)
+        gears.shape.rounded_rect(cr,w,h,6)
     end
 end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg --set-zoom-fill")
+awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg --set-auto")
 
--- Start applications
--- awful.util.spawn_with_shell("picom --config ~/.config/picom/picom.conf &")
--- awful.util.spawn_with_shell("polybar bar1")
---awful.util.spawn_with_shell("polybar bar2")
---awful.util.spawn_with_shell("polybar bar3")
--- awful.util.spawn_with_shell("polybar bar4")
--- awful.util.spawn_with_shell("polybar bar5")
+-- Start Applications
+awful.util.spawn_with_shell("pkill polybar")
 awful.util.spawn_with_shell("polybar longbar")
-awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250")
 
+awful.util.spawn_with_shell("pkill picom")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 --inactive-dim 0.1 -i 1")
 -- Switch Keyboard Layout to Dvorak
 awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")

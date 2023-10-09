@@ -3,9 +3,11 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Terminal Configuration
 export TERM=xterm-256color
 export VISUAL=nvim
 export EDITOR="$VISUAL"
+WINIT_X11_SCALE_FACTOR=1
 
 export ZDOTDIR="$HOME/.config/zsh"
 export TEXMFVAR="/var/lib/texmf"
