@@ -275,7 +275,7 @@ globalkeys = gears.table.join(
               {description = "view previous", group = "Awesome"}),
     awful.key({ modkey, }, "Right",  awful.tag.viewnext,
               {description = "view next", group = "Awesome"}),
-    awful.key({ modkey, }, "l", function () awful.client.focus.byidx(1) end,
+    awful.key({ modkey, }, "t", function () awful.client.focus.byidx(1) end,
               {description = "focus next by index", group = "Client"}),
     awful.key({ modkey, }, "h", function () awful.client.focus.byidx(-1) end,
               {description = "focus previous by index", group = "Client"}),
@@ -285,7 +285,7 @@ globalkeys = gears.table.join(
     -- Client
     awful.key({ modkey, "Shift" }, "h", function () awful.client.swap.byidx(  1)    end,
               {description = "swap with next client by index", group = "Client"}),
-    awful.key({ modkey, "Shift" }, "l", function () awful.client.swap.byidx( -1)    end,
+    awful.key({ modkey, "Shift" }, "t", function () awful.client.swap.byidx( -1)    end,
               {description = "swap with previous client by index", group = "Client"}),
     awful.key({ modkey, }, "g", awful.client.urgent.jumpto,
               {description = "jump to urgent client", group = "Client"}),
@@ -607,10 +607,8 @@ end)
 awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg --set-auto")
 
 -- Start Applications
-awful.util.spawn_with_shell("pkill polybar")
 awful.util.spawn_with_shell("polybar longbar")
 
-awful.util.spawn_with_shell("pkill picom")
 awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 --inactive-dim 0.1 -i 1")
 -- Switch Keyboard Layout to Dvorak
 awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")
