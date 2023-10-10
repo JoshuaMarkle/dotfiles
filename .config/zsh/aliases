@@ -1,3 +1,7 @@
+alias ls="exa --icons"
+alias la="exa -a --icons"
+alias lt="exa --tree"
+
 alias volume='pactl -- set-sink-volume 0 '
 
 alias rstudio='sudo /usr/lib/rstudio/rstudio --no-sandbox'
