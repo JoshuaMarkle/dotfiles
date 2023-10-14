@@ -609,6 +609,6 @@ awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
 
-awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 --inactive-dim 0.1 -i 1")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 -i 1")
 -- Switch Keyboard Layout to Dvorak
 awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")
