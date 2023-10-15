@@ -25,7 +25,7 @@ configuration {
 
 * {
     border-colour:               var(selected);
-    handle-colour:               var(foreground);
+    handle-colour:               var(selected);
     background-colour:           var(background);
     foreground-colour:           var(foreground);
     alternate-background:        var(background-alt);
@@ -33,7 +33,7 @@ configuration {
     normal-foreground:           var(foreground);
     urgent-background:           var(urgent);
     urgent-foreground:           var(background);
-    active-background:           var(active);
+    active-background:           var(selected);
     active-foreground:           var(background);
     selected-normal-background:  var(selected);
     selected-normal-foreground:  var(background);
@@ -96,7 +96,7 @@ mainbox {
 /*****----- Inputbar -----*****/
 inputbar {
     enabled:                     true;
-    spacing:                     10px;
+    spacing:                     15px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -124,7 +124,7 @@ entry {
     background-color:            inherit;
     text-color:                  inherit;
     cursor:                      text;
-    placeholder:                 "search...";
+    placeholder:                 "Search...";
     placeholder-color:           inherit;
 }
 num-filtered-rows {
@@ -156,7 +156,7 @@ case-indicator {
 listview {
     enabled:                     true;
     columns:                     1;
-    lines:                       12;
+    lines:                       6;
     cycle:                       true;
     dynamic:                     true;
     scrollbar:                   true;
@@ -176,7 +176,7 @@ listview {
     cursor:                      "default";
 }
 scrollbar {
-    handle-width:                5px ;
+    handle-width:                0px ;
     handle-color:                @handle-colour;
     border-radius:               8px;
     background-color:            @alternate-background;
@@ -208,7 +208,7 @@ element normal.active {
     text-color:                  var(active-foreground);
 }
 element selected.normal {
-    background-color:            var(normal-foreground);
+    background-color:            var(selected);
     text-color:                  var(normal-background);
 }
 element selected.urgent {
