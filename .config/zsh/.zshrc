@@ -25,7 +25,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 source ~/.config/zsh/aliases
 
 # Superuser stuff (type faster)
-xset r rate 200 30
+xset r rate 220 30
 
 # Load plugins
 source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"

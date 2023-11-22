@@ -1,0 +1,16 @@
+[colors]
+background = ${xrdb:background-clr:#0A0E14}
+buffer = ${xrdb:background-dim-clr:#45475A}
+foreground = ${xrdb:foreground-clr:#B3B1AD}
+dim = ${xrdb:foreground-dim-clr:#707880}
+
+black = ${xrdb:black-clr:#01060E}
+warning = ${xrdb:red-clr:#f07178}
+success = ${xrdb:green-clr:#20b97d}
+notify = ${xrdb:yellow-clr:#F9AF4F}
+blue = ${xrdb:blue-clr:#4c97e2}
+function = ${xrdb:magenta-clr:#8f8ae1}
+cyan = ${xrdb:cyan-clr:#90E1C6}
+white = ${xrdb:white-clr:#C7C7C7}
+transparent = #00000000
+

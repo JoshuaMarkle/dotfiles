@@ -16,16 +16,18 @@ font:
     style: Italic
 
 schemes:
-  onedark: &onedark
+  ayu_dark: &ayu_dark
     primary:
-      background: '#1f2329'
-      foreground: '#a0a8b7'
+      background: '#0A0E14'
+      foreground: '#B3B1AD'
     normal:
-      red: '#e55561'
-      yellow: '#e2b86b'
-      green: '#8ebd6b'
-      blue: '#4fa6ed'
-      magenta: '#bf68d9'
-      cyan: '#48b0bd'
+      red: '#f07178'
+      yellow: '#ffb454'
+      green: '#20b97d'
+      blue: '#4c97e2'
+      magenta: '#8f8ae1'
+      cyan: '#1caebf'
       white: '#dedede'
-colors: *onedark
+    indexed_colors:
+      - { index: 16, color: '#f0f000' }
+colors: *ayu_dark

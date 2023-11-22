@@ -604,7 +604,7 @@ end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/.config/awesome/themes/ayu/Wallpaper.jpg --set-auto")
+awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasa.png --set-zoom-fill")
 
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")

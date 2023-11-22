@@ -18,8 +18,8 @@ theme.icons_file = "f"
 
 theme.font = "CaskaydiaCoveNerdFont 10"
 theme.useless_gap = 15
-theme.border_width = 0
-theme.border_radius = 8
+theme.border_width = 2
+theme.border_radius = 10
 
 theme.background = "#1f2329"
 theme.crust = "#323641"
