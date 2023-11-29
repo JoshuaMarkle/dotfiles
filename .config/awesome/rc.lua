@@ -566,11 +566,11 @@ end)
 
 -- Set the wallpaper
 --gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasa.png --set-zoom-fill")
+awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasadark.png --set-zoom-fill")
 
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
 
 awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 -i 1")
 -- Switch Keyboard Layout to Dvorak
-awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")
+-- awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")

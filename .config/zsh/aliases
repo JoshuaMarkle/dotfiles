@@ -10,4 +10,4 @@ alias r=/usr/bin/R
 
 alias fetch=nitch
 
-alias githubkey='bash ~/.local/bin/copy-githubkey.sh'
+alias qemu=qemu-system-x86_64
