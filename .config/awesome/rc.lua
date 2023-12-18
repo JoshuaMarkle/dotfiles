@@ -272,7 +272,7 @@ globalkeys = gears.table.join(
     -- Awesome
     awful.key({ modkey, }, "Return", function () awful.spawn(terminal) end,
               {description = "open a terminal", group = "Awesome"}),
-    awful.key({ modkey, }, "f", function () awful.spawn("alacritty --class AlacrittyFetch -e sh -c 'nitch; $SHELL'") end,
+    awful.key({ modkey, }, "f", function () awful.spawn("alacritty --class AlacrittyFloating") end,
               {description = "open a terminal w/ fetch", group = "Awesome"}),
     awful.key({ modkey, }, "v", function() awful.spawn.with_shell("alacritty -e nvim") end,
               {description = "open nvim", group = "Awesome"}),
@@ -464,14 +464,14 @@ awful.rules.rules = {
           height = 500,
       }},
 
-    -- Alacritty Fetch Window
+    -- Alacritty Floating Window
     { rule_any = {
-        class = { "AlacrittyFetch" },
+        class = { "AlacrittyFloating" },
       }, properties = { 
           floating = true,
           placement = awful.placement.centered,
-          width = 300,
-          height = 380,
+          width = 550,
+          height = 150,
           ontop = true;
       }},
 
@@ -571,6 +571,7 @@ awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasadark.png --set-z
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
 
-awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 250 -i 1")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 -i 1")
+
 -- Switch Keyboard Layout to Dvorak
 -- awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")

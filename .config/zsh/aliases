@@ -2,6 +2,11 @@ alias ls="exa --icons"
 alias la="exa -a --icons"
 alias lt="exa --tree"
 
+alias school="cd ~/school"
+alias compsci="cd ~/school/compsci"
+alias console="cd ~/projects/console"
+alias algotype="cd ~/projects/AlgoType"
+
 alias volume='pactl -- set-sink-volume 0 '
 
 alias jupyternotebook=~/.local/bin/pythonstuff/jupyter-notebook
