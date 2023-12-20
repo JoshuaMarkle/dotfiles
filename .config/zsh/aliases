@@ -1,11 +1,19 @@
+alias cr=clear
 alias ls="exa --icons"
 alias la="exa -a --icons"
 alias lt="exa --tree"
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
 
+alias dots="cd ~/dotfiles"
 alias school="cd ~/school"
 alias compsci="cd ~/school/compsci"
 alias console="cd ~/projects/console"
 alias algotype="cd ~/projects/AlgoType"
+
+alias copy="xclip -selection c"
+alias past="xclip -selection clipboard -o"
 
 alias volume='pactl -- set-sink-volume 0 '
 

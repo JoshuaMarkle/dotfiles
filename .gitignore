@@ -1,0 +1,18 @@
+.config/Code - OSS/
+.config/Code/
+.config/flutter/
+.config/gh/
+.config/gtk-3.0/
+.config/inkscape/
+.config/libreoffice/
+.config/pulse/
+.config/rstudio/
+.config/spotify-tui/
+.config/spotifyd/
+.config/systemd/
+.config/torbrowser/
+
+.vim/undodir/
+.viminfo
+
+.bash_history

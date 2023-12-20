@@ -304,8 +304,8 @@ globalkeys = gears.table.join(
               {description = "show rofi emoji", group = "Menu"}),
     awful.key({ modkey, "Shift" }, "Escape", function() awful.util.spawn_with_shell("bash ~/.config/rofi/powermenu/type-2/powermenu.sh") end,
               {description = "show rofi power", group = "Menu"}),
-    awful.key({ modkey, "Shift" }, "s", function() awful.util.spawn_with_shell("bash ~/.config/rofi/applets/bin/screenshot.sh") end,
-              { description = "show rofi screenshot", group = "Menu"})
+    awful.key({ modkey, "Shift" }, "s", function() awful.util.spawn_with_shell("flameshot gui") end,
+              { description = "screenshot with flameshot", group = "Menu"})
 )
 
 clientkeys = gears.table.join(
