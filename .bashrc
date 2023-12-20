@@ -16,6 +16,10 @@ export ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
 
+# Disable history
+export HISTSIZE=0
+export HISTFILESIZE=0
+
 # Source best aliases
 source ~/.config/zsh/aliases
 

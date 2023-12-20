@@ -1,0 +1,7 @@
+# .stowrc file
+
+# Set default verbosity level (overrides -v option)
+--verbose=1
+
+# Use --ignore when running stow by default
+--ignore=.stow-local-ignore

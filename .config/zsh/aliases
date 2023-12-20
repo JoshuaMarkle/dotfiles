@@ -7,6 +7,8 @@ alias ...="cd ../.."
 alias ....="cd ../../.."
 
 alias dots="cd ~/dotfiles"
+alias "dots update"="stow -t ~ -d ~/dotfiles -v ."
+
 alias school="cd ~/school"
 alias compsci="cd ~/school/compsci"
 alias console="cd ~/projects/console"
@@ -14,13 +16,10 @@ alias algotype="cd ~/projects/AlgoType"
 
 alias copy="xclip -selection c"
 alias past="xclip -selection clipboard -o"
-
 alias volume='pactl -- set-sink-volume 0 '
 
+alias fetch=nitch
 alias jupyternotebook=~/.local/bin/pythonstuff/jupyter-notebook
 alias rstudio='sudo /usr/lib/rstudio/rstudio --no-sandbox'
 alias r=/usr/bin/R
-
-alias fetch=nitch
-
 alias qemu=qemu-system-x86_64
