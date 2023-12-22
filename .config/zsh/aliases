@@ -1,4 +1,6 @@
 alias cr=clear
+cda() { cd "$@" && exa -a --icons; }
+
 alias ls="exa --icons"
 alias la="exa -a --icons"
 alias lt="exa --tree"
@@ -6,8 +8,7 @@ alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."
 
-alias dots="cd ~/dotfiles"
-alias "dots update"="stow -t ~ -d ~/dotfiles -v ."
+dots() { case "$1" in update) stow -t ~ -d ~/dotfiles -v . ;; *) cd ~/dotfiles ;; esac }
 
 alias school="cd ~/school"
 alias compsci="cd ~/school/compsci"

@@ -26,6 +26,9 @@ export PYTHONSTARTUP=/dev/null
 # Add custom aliases
 source ~/.config/zsh/aliases
 
+# Keybinds
+bindkey -s ^f "~/.local/bin/project_switcher.sh/n"
+
 # Superuser stuff (type faster)
 xset r rate 220 30
 
@@ -34,6 +37,7 @@ source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"
 source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
+source "$ZDOTDIR/zsh-vi-mode/zsh-vi-mode.plugin.zsh"
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

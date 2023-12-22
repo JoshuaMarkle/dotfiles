@@ -571,7 +571,7 @@ awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasadark.png --set-z
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
 
-awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 350 -i 1")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 400 -i 1")
 
 -- Switch Keyboard Layout to Dvorak
 -- awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")

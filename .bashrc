@@ -23,5 +23,10 @@ export HISTFILESIZE=0
 # Source best aliases
 source ~/.config/zsh/aliases
 
+# Keybinds
+bind -x '"\C-x":exit'
+bind -x '"\C-f":"~/.local/bin/project_switcher.sh"'
+bind -x '"\C-n":"nvim"'
+
 # Modernize prompt
 export PS1='\[\e[1;34m\]\u@\h: \[\e[1;34m\]\w\[\e[0m\] ❱ '
