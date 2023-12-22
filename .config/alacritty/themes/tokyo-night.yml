@@ -1,20 +1,3 @@
-window:
-  padding:
-    x: 20
-    y: 20
-
-font:
-  size: 9.5
-  normal:
-    family: CaskaydiaCoveNerdFont
-    style: Regular
-  bold:
-    family: CaskaydiaCoveNerdFont
-    style: Bold
-  italic:
-    family: CaskaydiaCoveNerdFont
-    style: Italic
-
 schemes:
   # Tokyo Night theme, based on both:
   #   https://github.com/ghifarit53/tokyonight-vim
@@ -46,4 +29,3 @@ schemes:
       magenta: '#bb9af7'
       cyan:    '#0db9d7'
       white:   '#acb0d0'
-colors: *tokyo-night

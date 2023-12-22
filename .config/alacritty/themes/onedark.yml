@@ -1,0 +1,13 @@
+schemes:
+  onedark: &onedark
+    primary:
+      background: '#1f2329'
+      foreground: '#a0a8b7'
+    normal:
+      red: '#e55561'
+      yellow: '#e2b86b'
+      green: '#8ebd6b'
+      blue: '#4fa6ed'
+      magenta: '#bf68d9'
+      cyan: '#48b0bd'
+      white: '#dedede'

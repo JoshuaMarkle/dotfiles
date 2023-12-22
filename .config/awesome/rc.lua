@@ -565,12 +565,11 @@ client.connect_signal("manage", function (c)
 end)
 
 -- Set the wallpaper
---gears.wallpaper.maximized("~/Downloads/abstract-lines-wallpaper.jpg", s)
-awful.util.spawn_with_shell("nitrogen ~/pictures/wallpapers/nasadark.png --set-zoom-fill")
+local wallpapers = "~/pictures/wallpapers/tokyonight/chemicals"
+awful.util.spawn_with_shell("bash ~/.local/bin/random-wallpaper.sh " .. wallpapers);
 
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
-
 awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 400 -i 1")
 
 -- Switch Keyboard Layout to Dvorak
