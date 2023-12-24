@@ -42,7 +42,7 @@ end
 
 -- Variable Definitions
 -- Themes define colours, icons, font and wallpapers.
-beautiful.init("~/.config/awesome/themes/onedark/theme.lua")
+beautiful.init("~/.config/awesome/themes/tokyonight/theme.lua")
 
 terminal = "alacritty"
 editor = os.getenv("EDITOR") or "nvim"
@@ -570,7 +570,7 @@ awful.util.spawn_with_shell("bash ~/.local/bin/random-wallpaper.sh " .. wallpape
 
 -- Start Applications
 awful.util.spawn_with_shell("polybar longbar")
-awful.util.spawn_with_shell("~/.config/picom/build/src/picom -b --animations --animation-window-mass 0.5 --animation-for-open-window zoom --animation-stiffness 400 -i 1")
+awful.util.spawn_with_shell("~/.config/picom/build/src/picom --config ~/.config/picom/picom.conf")
 
 -- Switch Keyboard Layout to Dvorak
 -- awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")

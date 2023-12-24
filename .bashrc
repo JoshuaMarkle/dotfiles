@@ -15,6 +15,7 @@ export TEXMFVAR="/var/lib/texmf"
 export ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export FZF_DEFAULT_OPTS="--height=100% --info=inline --border --margin=1 --padding=1 --color=bg+:#1a1b26,bg:#1a1b26,border:#a9b1d6,spinner:#1abc9c,hl:#ff007c,fg:#c0caf5,header:#ffffff,info:#1abc9c,pointer:#f7768e,marker:#db4b4b,fg+:#a9b1d6,preview-bg:#1a1b26,prompt:#7aa2f7,hl+:#1abc9c"
 
 # Disable history
 export HISTSIZE=0
