@@ -42,6 +42,7 @@
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     status                  # exit code of the last command
+	tmux_session_number		# number of tmux sessions
     command_execution_time  # duration of the last command
     background_jobs         # presence of background jobs
     direnv                  # direnv status (https://direnv.net/)
@@ -1643,6 +1644,25 @@
     p10k segment -f 208 -i '⭐' -t 'hello, %n'
   }
 
+	function prompt_tmux_session_number() {
+		# Check if we are inside a tmux session
+		if [[ "$TMUX" != "" ]]; then
+		  return
+		fi
+
+		# Get the number of tmux sessions
+		local session_count=$(tmux list-sessions 2>/dev/null | wc -l)
+
+		# If there are no sessions, don't print anything
+		if [[ $session_count -eq 0 ]]; then
+		  return
+		fi
+
+		# Print the number of sessions
+		p10k segment -f 68 -i $session_count
+	}
+
+
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
   # is to generate the prompt segment for display in instant prompt. See
   # https://github.com/romkatv/powerlevel10k/blob/master/README.md#instant-prompt.
@@ -1660,6 +1680,10 @@
     # instant_prompt_example. This will give us the same `example` prompt segment in the instant
     # and regular prompts.
     prompt_example
+  }
+
+  function instant_prompt_tmux_session_number() {
+	  prompt_tmux_session_number
   }
 
   # User-defined prompt segments can be customized the same way as built-in segments.
