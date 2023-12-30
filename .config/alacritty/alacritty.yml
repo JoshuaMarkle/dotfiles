@@ -4,7 +4,7 @@ window:
     y: 20
 
 font:
-  size: 8
+  size: 9.5
   normal:
     family: CaskaydiaCoveNerdFont
     style: Regular

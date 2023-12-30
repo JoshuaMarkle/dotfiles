@@ -641,3 +641,6 @@ awful.util.spawn_with_shell("~/.config/picom/build/src/picom --config ~/.config/
 
 -- Switch Keyboard Layout to Dvorak
 -- awful.util.spawn_with_shell("setxkbmap -layout us -variant dvorak")
+
+-- Open firefox
+awful.util.spawn_with_shell("firefox")
