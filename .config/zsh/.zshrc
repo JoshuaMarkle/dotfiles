@@ -24,9 +24,19 @@ export HISTSIZE=0
 export HISTFILESIZE=0
 export PYTHONSTARTUP=/dev/null
 
-# Keybinds
-bindkey -s ^f "~/.local/bin/project_switcher.sh^M"
-bindkey -s ^n "nvim^M"
+# Keybinds (make them widgets for instant execution)
+project_switcher() {
+    ~/.local/bin/project_switcher.sh
+    zle reset-prompt  # Reset the prompt to clear current line input
+}
+open_nvim() {
+    nvim
+    zle reset-prompt  # Reset the prompt to clear current line input
+}
+zle -N project_switcher
+zle -N open_nvim
+bindkey '^f' project_switcher
+bindkey '^n' open_nvim
 
 # Add custom aliases
 source ~/.config/zsh/aliases
