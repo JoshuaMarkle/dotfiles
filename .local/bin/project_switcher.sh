@@ -16,7 +16,6 @@ selected_name=$(basename "$selected" | tr . _)
 
 # Check if the session already exists
 if tmux has-session -t="$selected_name" 2> /dev/null; then
-    echo "Session $selected_name already exists. Attaching to it."
     tmux attach-session -t "$selected_name"
     exit 0
 fi
@@ -27,4 +26,4 @@ if ! tmux new-session -ds "$selected_name" -c "$selected"; then
     exit 1
 fi
 
-tmux attach-session -t "$selected_name"
+exec tmux attach-session -t "$selected_name"
