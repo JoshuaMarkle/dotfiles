@@ -19,12 +19,15 @@ A solid collection of dotfiles primarily focused around configuring the `Awesome
 All of these files are meant to be in the home directory
 
 ```
+cd ~
 git clone https:://github.com/JoshuaMarkle/dotfiles.git
 ```
 
-Just move everything out into the home directory
+This will create a `dotfiles` directory inside of `~`. Now, just move everything out into the home directory
 
 ```
 cd dotfiles
 mv * ~
 ```
+
+And you're all set! Enjoy :)

@@ -15,12 +15,12 @@ alias compsci="cd ~/school/compsci"
 alias console="cd ~/projects/console"
 alias algotype="cd ~/projects/AlgoType"
 
-alias copy="xclip -selection c"
-alias past="xclip -selection clipboard -o"
+alias copy="wl-copy"
+alias paste="wl-paste"
 alias volume='pactl -- set-sink-volume 0 '
 
 alias fetch=nitch
 alias jupyternotebook=~/.local/bin/pythonstuff/jupyter-notebook
-alias rstudio='sudo /usr/lib/rstudio/rstudio --no-sandbox'
+alias rstudio='/usr/lib/rstudio/rstudio' # Might need --no-sandbox
 alias r=/usr/bin/R
 alias qemu=qemu-system-x86_64

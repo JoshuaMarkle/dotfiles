@@ -1,0 +1,44 @@
+{
+    "jobs_tab_visibility": "shown",
+    "copilot_enabled": true,
+    "initial_working_directory": "~",
+    "python_project_environment_automatic_activate": false,
+    "python_type": "system",
+    "python_version": "3.11.6",
+    "python_path": "/usr/bin/python3.11",
+    "pdf_previewer": "none",
+    "posix_terminal_shell": "zsh",
+    "terminal_bell_style": "none",
+    "panes": {
+        "quadrants": [
+            "Source",
+            "TabSet2",
+            "Console",
+            "TabSet1"
+        ],
+        "tabSet1": [
+            "Environment",
+            "Files",
+            "Plots",
+            "Viewer",
+            "Help",
+            "Presentation"
+        ],
+        "tabSet2": [
+            "Presentations"
+        ],
+        "hiddenTabSet": [
+            "History",
+            "Connections",
+            "Packages",
+            "Build",
+            "VCS",
+            "Tutorial",
+            "Presentations"
+        ],
+        "console_left_on_top": false,
+        "console_right_on_top": true,
+        "additional_source_columns": 0
+    },
+    "editor_theme": "Chrome"
+}

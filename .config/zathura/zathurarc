@@ -1,45 +1,62 @@
+# Zathura config
+# ~/.config/zathura/zathurarc
+
+# --- General ---
+
+# Layout
 set window-title-basename "true"
-set selection-clipboard "clipboard"
+set statusbar-h-padding 0
+set statusbar-v-padding 0
+set page-padding 3
 
-# Colors
-set notification-error-bg       "#f7768e" # Red
-set notification-error-fg       "#c0caf5" # Foreground
-set notification-warning-bg     "#ff9e64" # Orange
-set notification-warning-fg     "#292e42" # Selection
-set notification-bg             "#1a1b26" # Background
-set notification-fg             "#c0caf5" # Foreground
+# Keybindings
+map u scroll half-up 
+map d scroll half-down
+map D toggle_page_mode
+map r reload
+map R rotate
+map K zoom in
+map J zoom out
+map i recolor
+map p print
 
-set completion-bg               "#1a1b26" # Background
-set completion-fg               "#7aa2f7" # Comment
-set completion-group-bg         "#1a1b26" # Background
-set completion-group-fg         "#7aa2f7" # Comment
-set completion-highlight-bg     "#292e42" # Selection
-set completion-highlight-fg     "#c0caf5" # Foreground
+# --- Colors ---
 
-set index-bg                    "#1a1b26" # Background
-set index-fg                    "#c0caf5" # Foreground
-set index-active-bg             "#292e42" # Current Line
-set index-active-fg             "#c0caf5" # Foreground
+set recolor true
 
-set inputbar-bg                 "#1a1b26" # Background
-set inputbar-fg                 "#c0caf5" # Foreground
-set statusbar-bg                "#1a1b26" # Background
-set statusbar-fg                "#c0caf5" # Foreground
+set notification-error-bg       "#aa4650" # Dark Red
+set notification-error-fg       "#101216" # Background
+set notification-warning-bg     "#dea93f" # Dark Yellow
+set notification-warning-fg     "#101216" # Background
+set notification-bg             "#101216" # Background
+set notification-fg             "#d6deed" # Foreground
 
-set highlight-color             "#ff9e64" # Orange
-set highlight-active-color      "#ff007e" # Pink
+set completion-bg               "#101216" # Background
+set completion-fg               "#d6deed" # Foreground
+set completion-group-bg         "#101216" # Background
+set completion-group-fg         "#d6deed" # Foreground
+set completion-highlight-bg     "#dea93f" # Dark Yellow
+set completion-highlight-fg     "#162320" # Background
 
-set default-bg                  "#1a1b26" # Background
-set default-fg                  "#c0caf5" # Foreground
+set index-bg                    "#101216" # Background
+set index-fg                    "#d6deed" # Foreground
+set index-active-bg             "#dea93f" # Dark Yellow 
+set index-active-fg             "#101216" # Background
+
+set inputbar-bg                 "#101216" # Background
+set inputbar-fg                 "#d6deed" # Foreground
+set statusbar-bg                "#101216" # Background
+set statusbar-fg                "#d6deed" # Foreground
+
+set highlight-color             "#dea93f" # Dark Yellow
+set highlight-active-color      "#aa4650" # Dark Red 
+
+set default-bg                  "#101216" # Background
+set default-fg                  "#d6deed" # Foreground
 
 set render-loading              true
-set render-loading-fg           "#1a1b26" # Background
-set render-loading-bg           "#b2b1ad" # Foreground
+set render-loading-fg           "#101216" # Background
+set render-loading-bg           "#d6deed" # Foreground
 
-# Recolor mode settings
-set recolor-lightcolor          "#1a1b26" # Background
-set recolor-darkcolor           "#ffffff" # Foreground
-
-# Startup options
-set adjust-open width
-set recolor true
+set recolor-lightcolor          "#101216" # Background
+set recolor-darkcolor           "#d6deed" # Foreground

@@ -26,4 +26,4 @@ if ! tmux new-session -ds "$selected_name" -c "$selected"; then
     exit 1
 fi
 
-exec tmux attach-session -t "$selected_name"
+tmux attach-session -t "$selected_name"

@@ -30,4 +30,5 @@ bind -x '"\C-f":"~/.local/bin/project_switcher.sh"'
 bind -x '"\C-n":"nvim"'
 
 # Modernize prompt
-export PS1='\[\e[1;34m\]\u@\h: \[\e[1;34m\]\w\[\e[0m\] ❱ '
+export PS1="\[\033[34m\]  \[\033[1;37m\]\w \[\033[0;34m\] \[\033[0m\]"
+#export PS1='\[\e[1;34m\]\w\[\e[0m\] ❱ '

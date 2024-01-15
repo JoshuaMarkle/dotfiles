@@ -1,8 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # General
 export TERM=xterm-256color
 export VISUAL=nvim
@@ -10,7 +5,6 @@ export EDITOR="$VISUAL"
 
 # Terminal
 export ZDOTDIR="$HOME/.config/zsh"
-export ZSH="$ZDOTDIR/ohmyzsh"
 export TEXMFVAR="/var/lib/texmf"
 
 # Tools
@@ -24,34 +18,32 @@ export HISTSIZE=0
 export HISTFILESIZE=0
 export PYTHONSTARTUP=/dev/null
 
-# Keybinds (make them widgets for instant execution)
-project_switcher() {
-    ~/.local/bin/project_switcher.sh
-    zle reset-prompt  # Reset the prompt to clear current line input
-}
-open_nvim() {
-    nvim
-    zle reset-prompt  # Reset the prompt to clear current line input
-}
-zle -N project_switcher
-zle -N open_nvim
-bindkey '^f' project_switcher
-bindkey '^n' open_nvim
-
 # Add custom aliases
 source ~/.config/zsh/aliases
 
-# Superuser stuff (type faster)
-xset r rate 220 30
+# Keybinds
+function project_switcher() {
+    ( # Terminal magic to make the script work
+        exec </dev/tty
+        exec <&1
+    	~/.local/bin/project_switcher.sh
+    )
+    zle reset-prompt
+}
+zle -N project_switcher
+bindkey '^f' project_switcher
 
-### Load plugins ###
-source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"
+open_nvim() {
+    nvim
+    zle reset-prompt
+}
+zle -N open_nvim
+bindkey '^n' open_nvim
+
+# Plugins!
 source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
-ZSH_THEME="powerlevel10k/powerlevel10k"
-
-# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
-[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
-source /home/josh/.config/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+eval "$(starship init zsh)"
+# PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '
