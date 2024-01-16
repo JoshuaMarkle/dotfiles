@@ -35,12 +35,8 @@
 # $shell
 # """
 
-format = """
-$directory\
-$git_status\
-$character\
-$shell
-"""
+format = "$directory$character$shell"
+right_format = "$git_branch$git_status"
 
 # Disable the blank line at the start of the prompt
 add_newline = false
@@ -81,23 +77,36 @@ style = "fg:#c0caf5 bg:#1a1b26 bold"
 
 
 [git_branch]
-format = "[](fg:#1a1b26 bg:none)[$branch]($style)[](fg:#1a1b26 bg:#1a1b26)[](fg:#1abc9c bg:#1a1b26)[](fg:#1a1b26 bg:#1abc9c)[](fg:#1abc9c bg:none) "
-style = "fg:#c0caf5 bg:#1a1b26"
+format = "[$symbol$branch](fg:#c0caf5 bg:none) "
 symbol = " "
 
+# [git_status]
+# format="[$all_status$ahead_behind]($style) "
+# style = "fg:#c0caf5 bg:#1a1b26"
+# conflicted = "="
+# ahead =	"⇡${count}"
+# behind = "⇣${count}"
+# diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+# untracked = "?${count}"
+# stashed = ""
+# modified = "!${count}"
+# staged = "+${count}"
+# renamed = "~${count}"
+# deleted = "-${count}"
+
 [git_status]
-format="[$all_status$ahead_behind]($style)"
+format="$all_status$ahead_behind "
 style = "fg:#c0caf5 bg:#1a1b26"
 conflicted = "="
-ahead =	"⇡${count}"
-behind = "⇣${count}"
-diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-untracked = "?${count}"
-stashed = ""
-modified = "!${count}"
-staged = "+${count}"
-renamed = "~${count}"
-deleted = "-${count}"
+ahead =	"[⇡${count}](fg:#1abc9c bg:none)"
+behind = "[⇣${count}](fg:#f7768e bg:none)"
+diverged = "⇡${ahead_count}⇣${behind_count}"
+untracked = "[?${count}](fg:#7aa2f7 bg:none)"
+stashed = "*"
+modified = "[!${count}](fg:#ff9e64)"
+staged = "[+${count}](fg:#1abc9c bg:none)"
+renamed = "[~${count}](fg:#7aa2f7 bg:none)"
+deleted = "[-${count}](fg:#f7768e bg:none)"
 
 [git_commit]
 format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"

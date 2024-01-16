@@ -45,5 +45,16 @@ source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
 source "$ZDOTDIR/zsh-autosuggestions/zsh-autosuggestions.zsh"
 source "$ZDOTDIR/zsh-autocomplete/zsh-autocomplete.plugin.zsh"
 
+init_transient_prompt() {
+  local prompt=$(starship prompt)
+  export ORIGINAL_PROMPT=$prompt
+  export PROMPT='%{%f%b%k%}$(starship prompt) %E'
+}
+
+restore_original_prompt() {
+  export PROMPT=$ORIGINAL_PROMPT
+}
+init_transient_prompt
+
 eval "$(starship init zsh)"
 # PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '

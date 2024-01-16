@@ -25,7 +25,7 @@ window#waybar {
 #workspaces button {
     padding: 0px 5px;
     border-radius: 16px;
-    color: rgba(22, 22, 30, 0.3);
+    color: rgba(22, 22, 30, 0.5);
 }
 
 #workspaces button.active {
@@ -94,7 +94,7 @@ window#waybar {
 }
 
 #backlight {
-    background-color: #24283b;
+    background-color: transparent;
     color: #db4b4b;
     border-radius: 0px 0px 0px 0px;
     margin: 5px;
