@@ -1,12 +1,12 @@
 {
-    "position": "bottom",
+    "position": "top",
     "layer": "top",
     "height": 14,
     "margin-top": 0,
     "margin-bottom": 0,
     "margin-left": 0,
     "margin-right": 0,
-    "modules-left": ["custom/launcher", "custom/playerctl", "custom/playerlabel"],
+    "modules-left": ["custom/launcher", "custom/playerlabel"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["network", "pulseaudio", "battery", "clock"],
 

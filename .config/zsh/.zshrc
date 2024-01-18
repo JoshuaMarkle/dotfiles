@@ -26,7 +26,7 @@ function project_switcher() {
     ( # Terminal magic to make the script work
         exec </dev/tty
         exec <&1
-    	~/.local/bin/project_switcher.sh
+    	~/.local/bin/project-switcher.sh
     )
     zle reset-prompt
 }
@@ -55,6 +55,8 @@ restore_original_prompt() {
   export PROMPT=$ORIGINAL_PROMPT
 }
 init_transient_prompt
+
+la && echo
 
 eval "$(starship init zsh)"
 # PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '

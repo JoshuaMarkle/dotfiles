@@ -22,10 +22,11 @@ window#waybar {
   font-weight: normal;
   font-style: normal;
 }
+
 #workspaces button {
     padding: 0px 5px;
     border-radius: 16px;
-    color: rgba(22, 22, 30, 0.5);
+    color: #c0caf5;
 }
 
 #workspaces button.active {
@@ -43,7 +44,7 @@ window#waybar {
 }
 
 #custom-date {
-	color: #D3869B;
+    color: #c0caf5;
 }
 
 #custom-power {
@@ -148,26 +149,22 @@ window#waybar {
 
 #custom-playerctl {
 	background: transparent;
-	padding-left: 15px;
-  padding-right: 14px;
+    color: #c0caf5;
 	border-radius: 16px;
-  /*border-left: solid 1px #282738;*/
-  /*border-right: solid 1px #282738;*/
-  margin-top: 5px;
-  margin-bottom: 5px;
-  margin-left: 0px;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	margin-left: 0px;
+	font-weight: normal;
+	font-style: normal;
+	font-size: 16px;
 }
 
 #custom-playerlabel {
     background: transparent;
+    color: #c0caf5;
     padding-left: 10px;
     padding-right: 15px;
     border-radius: 16px;
-    /*border-left: solid 1px #282738;*/
-    /*border-right: solid 1px #282738;*/
     margin-top: 5px;
     margin-bottom: 5px;
     font-weight: normal;
