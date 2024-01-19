@@ -1,0 +1,27 @@
+[pyprland]
+plugins = [
+	"scratchpads",
+	"workspaces_follow_focus"
+]
+
+# [workspaces_follow_focus]
+# max_workspaces = 9
+
+[scratchpads.term]
+command = "kitty --class kitty-term"
+animation = "fromBottom"
+size = "80% 80%"
+unfocus = "hide"
+
+[scratchpads.music]
+command = "spotify --class spotify"
+animation = "fromBottom"
+size = "80% 80%"
+unfocus = "hide"
+
+# [monitors]
+# unknown = "wlrlui"
+
+# [monitors.placement]
+# "Acer".leftOf = "HDMI-0"
+# "Sony".topOf = "eDP-1"
