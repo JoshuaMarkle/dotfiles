@@ -8,14 +8,17 @@
   "margin-right": 0,
   "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["custom/playerlabel"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock"],
+  "modules-right": ["network", "pulseaudio", "battery", "clock", "date"],
 
   // Modules configuration
   "clock": {
     "format": " {:%H:%M}",
+  },
+
+  "date": {
+    "format": " {:%d/%m}",
     "tooltip": "true",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": " {:%d/%m}",
   },
 
   "hyprland/workspaces": {
@@ -96,11 +99,11 @@
   },
 
   "network": {
-    "format-wifi": "󰤨  {essid}",
-    "format-ethernet": " {ifname}: Aesthetic",
-    "format-linked": " {ifname} (No IP)",
-    "format-disconnected": "󰤭",
-    "format-alt": " {ifname}: {ipaddr}/{cidr}",
+    "format-wifi": "󰤨 ",
+    "format-disconnected": "󰤭 ",
+    // "format-alt": " {ifname}: {ipaddr}/{cidr}",
+    // "format-ethernet": " {ifname}: Aesthetic",
+    // "format-linked": " {ifname} (No IP)",
     "tooltip-format": "{essid}",
     "on-click-right": "nm-connection-editor",
   },
@@ -108,14 +111,6 @@
   "tray": {
     "icon-size": 16,
     "spacing": 5,
-  },
-
-  "backlight": {
-    // "device": "acpi_video1",
-    "format": "{icon} {percent}%",
-    "format-icons": ["", "", "", "", "", "", "", "", ""],
-    // "on-scroll-up":,
-    // "on-scroll-down":,
   },
 
   "pulseaudio": {

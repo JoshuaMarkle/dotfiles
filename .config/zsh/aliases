@@ -18,6 +18,7 @@ alias algotype="cd ~/projects/AlgoType"
 alias copy="wl-copy"
 alias paste="wl-paste"
 alias volume='pactl -- set-sink-volume 0 '
+alias screenshot='grim -g "$(slurp)"'
 
 alias fetch=nitch
 alias jupyternotebook=~/.local/bin/pythonstuff/jupyter-notebook

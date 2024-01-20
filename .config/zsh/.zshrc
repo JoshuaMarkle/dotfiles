@@ -56,7 +56,9 @@ restore_original_prompt() {
 }
 init_transient_prompt
 
-la && echo
+if [[ -n $TMUX ]]; then
+    la && echo
+fi
 
 eval "$(starship init zsh)"
 # PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '
