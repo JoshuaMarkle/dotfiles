@@ -32,16 +32,26 @@ selected_name=$(echo "$selected" | tr . _ | sed 's/!$//')
 # Retrieve the actual path from associative array
 selected_path=${dir_map[$selected_name]}
 
-# Check if the session already exists
+# Switch into already existing session if it exists
 if tmux has-session -t="$selected_name" 2> /dev/null; then
-    tmux attach-session -t "$selected_name"
-    exit 0
+	if [ -n "$TMUX" ]; then
+		tmux switch -t "$session_name"
+	else
+		tmux attach-session -t "$selected_name"
+	fi
+
+	exit 0
 fi
 
-# Create and attach to a new session if it doesn't exist
+# Create a new session if it doesn't exist
 if ! tmux new-session -ds "$selected_name" -c "$selected_path"; then
-    echo "Failed to create tmux session"
-    exit 1
+	echo "Failed to create tmux session"
+	exit 1
 fi
 
-tmux attach-session -t "$selected_name"
+# Attach to newly created session
+if [ -n "$TMUX" ]; then
+	tmux switch -t "$selected_name"
+else
+	tmux attach-session -t "$selected_name"
+fi

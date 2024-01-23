@@ -53,7 +53,7 @@
   },
 
   "custom/playerlabel": {
-    "format": "<span>{}</span>",
+    "format": "  <span>{}</span>",
     "return-type": "json",
     "max-length": 48,
     "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",

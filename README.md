@@ -1,16 +1,16 @@
-# No Place Like ~
+# TokyDots
 
-A solid collection of dotfiles primarily focused around configuring the `AwesomeWM` but has useful other things
+A solid collection of dotfiles primarily focused around the **Tokyo Night** theme.
 
 ## Support For
 
-- **AwesomeWM:** An *awesome* window manager
+- **Hyprland:** Customizable wayland compositor
 - **Polybar:** A highly customizable navigation bar
 - **Rofi:** Cool application launcher
 - **Dunst:** Notification system
-- **Alacritty:** Terminal emulator
+- **Kitty:** GPU Accelerated Terminal emulator
 - **Tmux:** Terminal multiplexer
-- **Zsh:** Customizable shell (bash alternative)
+- **Zsh:** More capable shell (bash alternative)
 - **Neovim:** Blazingly fast text editor
 - **Zathura:** Document viewer
 
