@@ -16,8 +16,8 @@ export QT_QPA_PLATFORMTHEME=qt5ct
 
 # Wayland fix
 export QT_QPA_PLATFORM=wayland
-export XDG_CURRENT_DESKTOP=hyprland
-export XDG_SESSION_DESKTOP=hyprland
+export XDG_CURRENT_DESKTOP=Hyprland
+export XDG_SESSION_DESKTOP=Hyprland
 export XDG_CURRENT_SESSION_TYPE=wayland
 export GDK_BACKEND=wayland,x11
 export MOZ_ENABLE_WAYLAND=1

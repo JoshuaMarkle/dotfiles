@@ -101,11 +101,8 @@
   "network": {
     "format-wifi": "󰤨 ",
     "format-disconnected": "󰤭 ",
-    // "format-alt": " {ifname}: {ipaddr}/{cidr}",
-    // "format-ethernet": " {ifname}: Aesthetic",
-    // "format-linked": " {ifname} (No IP)",
     "tooltip-format": "{essid}",
-    "on-click-right": "nm-connection-editor",
+    "on-click": "bash ~/.config/rofi/network/rofi-network-manager.sh",
   },
 
   "tray": {
