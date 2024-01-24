@@ -35,7 +35,7 @@ selected_path=${dir_map[$selected_name]}
 # Switch into already existing session if it exists
 if tmux has-session -t="$selected_name" 2> /dev/null; then
 	if [ -n "$TMUX" ]; then
-		tmux switch -t "$session_name"
+		tmux switch -t "$selected_name"
 	else
 		tmux attach-session -t "$selected_name"
 	fi

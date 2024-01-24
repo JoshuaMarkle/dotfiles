@@ -8,13 +8,13 @@ plugins = [
 # max_workspaces = 9
 
 [scratchpads.term]
-command = "kitty --class kitty-term"
-animation = "fromTop"
-size = "60% 60%"
+command = "kitty --class kitty-scratch"
+animation = "fromBottom"
+size = "80% 80%"
 unfocus = "hide"
 
 [scratchpads.music]
-command = "spotify --class spotify"
+command = "spotify --class spotify-scratch"
 animation = "fromBottom"
 size = "80% 80%"
 unfocus = "hide"

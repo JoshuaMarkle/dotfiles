@@ -1,3 +1,13 @@
+/**
+ *
+ * Author : George Demesiotis (P3rf)
+ * Github : https://github.com/P3rf/rofi-network-manager
+ * 
+ * Modified by Joshua Markle (JoshuaMarkle) 
+ * 
+ **/
+
+/*****----- Configuration -----*****/
 configuration {
 	show-icons:		false;
 	sidebar-mode: 	false;
@@ -5,14 +15,17 @@ configuration {
 	me-select-entry: "";
 	me-accept-entry: [MousePrimary];
 }
+
+/*****----- Global Properties -----*****/
 *{
 	font: "CaskaydiaCove Nerd Font 10";			//Font
 	//Colors
 	foreground:#c0caf5; 				//Text
 	background:#1a1b26; 				//Background
-	accent:#7aa2f7; 					//Highlight
-	foreground-selection:@foreground; 	//Selection_fg
-	background-selection:#32344a; 		//Selection_bg
+	accent:#7aa2f7; 					//Actual color
+	foreground-selection:@foreground; 	//Selection foreground
+	background-selection:#32344a; 		//Selection backgroundn
+	border:#a9b1d6aa;					//Border color
 
 	transparent:					#ffffff00;
 	background-color:				@transparent;
@@ -27,7 +40,7 @@ configuration {
 	selected-active-foreground:  	@background-selection;
 	alternate-normal-foreground: 	@foreground;
 	alternate-active-background: 	@background;
-	bordercolor:                 	@accent;
+	bordercolor:                 	@border;
 	normal-background:           	@transparent;
 	selected-normal-background:  	@background-selection;
 	separatorcolor:              	@accent;
@@ -38,20 +51,29 @@ configuration {
 	selected-active-background:  	@transparent;
 	active-background:           	@transparent;
 }
+
+/*****----- Main Window -----*****/
 window {
 	text-color:			@foreground;
 	background-color:	@background;
-	border-radius: 		10px;
-	border: 			17;
-	padding: 			20;
+    border:                      2px solid;
+    border-radius:               8px;
+    border-color:                @bordercolor;
+	padding: 			40;
 }
+
+/*****----- Main Box -----*****/
 mainbox {
 	border: 	0;
 	padding: 	0;
 }
+
+/*****----- Inputbar -----*****/
 textbox {
 	text-color: @foreground;
 }
+
+/*****----- Listview -----*****/
 listview {
 	spacing:		4px;
 	dynamic:		true;
@@ -60,69 +82,86 @@ listview {
 	scrollbar:		false;
 	text-color:		@separatorcolor;
 }
+
 element {
 	border:			0;
 	padding:		0;
 	border-radius:	4px;
 }
+
 element-text {
 	background-color: inherit;
 	text-color:       inherit;
 }
+
 element.normal.normal {
 	text-color:			@normal-foreground;
 	background-color:	@normal-background;
 }
+
 element.normal.urgent {
 	text-color:			@urgent-foreground;
 	background-color:	@urgent-background;
 }
+
 element.normal.active {
 	text-color:			@active-foreground;
 	background-color:	@active-background;
 }
+
 element.selected.normal {
 	text-color:			@selected-normal-foreground;
 	background-color:	@selected-normal-background;
 }
+
 element.selected.urgent {
 	text-color:			@selected-urgent-foreground;
 	background-color:	@selected-urgent-background;
 }
+
 element.selected.active {
 	text-color:			@selected-active-foreground;
 	background-color:	@selected-active-background;
 }
+
 element.alternate.normal {
 	text-color:			@alternate-normal-foreground;
 	background-color:	@alternate-normal-background;
 }
+
 element.alternate.urgent {
 	text-color:			@alternate-urgent-foreground;
 	background-color:	@alternate-urgent-background;
 }
+
 element.alternate.active {
 	text-color:			@alternate-active-foreground;
 	background-color:	@alternate-active-background;
 }
+
 mode-switcher {
 	border:	0;
 }
+
 button selected {
 	text-color:			@selected-normal-foreground;
 	background-color:	@selected-normal-background;
 }
+
 button normal {
 	text-color:	@foreground;
 }
+
 inputbar {
 	children: [textbox-prompt-colon,entry];
 }
+
 textbox-prompt-colon{
 	expand:	false;
 	margin: 0;
 	str:	":";
 }
+
 entry {
 	placeholder:	"";
 }
