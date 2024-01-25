@@ -38,7 +38,7 @@ window#waybar {
 }
 
 #workspaces button.empty {
-  color: rgba(255, 255, 255, 0.5);
+  color: #565f89;
   background-color: transparent;
   border-radius: 16px;
 }
@@ -51,8 +51,8 @@ window#waybar {
 #custom-randwall,
 #custom-launcher {
   background: transparent;
-  padding: 5px 5px 5px 5px;
-  margin: 5px 5px 5px 5px;
+  padding: 5px;
+  margin: 5px;
   border-radius: 8px;
   border: solid 0px #c0caf5;
 }
@@ -84,8 +84,8 @@ window#waybar {
   color: #c0caf5;
   background-color: transparent;
   border-radius: 0px 0px 0px 24px;
-  padding-right: 10px;
-  margin: 5px;
+  padding-right: 15px;
+  margin-left: 0px;
   font-weight: bold;
   /*border-left: solid 1px #282738;*/
 }
@@ -122,6 +122,7 @@ window#waybar {
 #pulseaudio {
   color: #c0caf5;
   margin-right: 0px;
+  margin-left: 0px;
 }
 
 #pulseaudio.muted {
@@ -141,7 +142,6 @@ window#waybar {
   margin: 0px;
   margin-left: 10px;
   padding: 5px;
-  /*border-right: solid 1px #282738;*/
   font-size: 18px;
 }
 
@@ -181,8 +181,6 @@ window#waybar {
   padding-left: 15px;
   padding-right: 15px;
   border-radius: 16px;
-  /*border-left: solid 1px #282738;*/
-  /*border-right: solid 1px #282738;*/
   margin-top: 5px;
   margin-bottom: 5px;
   font-weight: normal;
@@ -197,7 +195,6 @@ window#waybar {
 
 #cpu {
   background-color: transparent;
-  /*color: #ff9e64;*/
   border-radius: 16px;
   margin: 5px;
   margin-left: 5px;
@@ -208,7 +205,6 @@ window#waybar {
 
 #memory {
   background-color: transparent;
-  /*color: #83A598;*/
   border-radius: 16px;
   margin: 5px;
   margin-left: 5px;
@@ -219,7 +215,6 @@ window#waybar {
 
 #disk {
   background-color: transparent;
-  /*color: #1abc9c;*/
   border-radius: 16px;
   margin: 5px;
   margin-left: 5px;
@@ -230,7 +225,6 @@ window#waybar {
 
 #custom-hyprpicker {
   background-color: transparent;
-  /*color: #1abc9c;*/
   border-radius: 16px;
   margin: 5px;
   margin-left: 5px;

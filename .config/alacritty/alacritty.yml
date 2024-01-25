@@ -17,6 +17,8 @@ font:
 
 schemes:
   # Tokyo Night theme, based on both:
+  #   https://github.com/ghifarit53/tokyonight-vim
+  #   https://github.com/enkia/tokyo-night-vscode-theme
   tokyo-night: &tokyo-night # Default colors
     primary:
       background: "#1a1b26"

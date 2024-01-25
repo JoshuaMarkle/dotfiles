@@ -18,9 +18,9 @@
 
   // Modules configuration
   "clock": {
-    //  
-    "format": "{:%H:%M}",
-    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    //  
+    "format": "{: %H:%M}",
+    "format-alt": "{: %H:%M   %m/%d/%y}",
     "tooltip-format": "<tt><small>{calendar}</small></tt>",
     "calendar": {
       "on-scroll": 1,
@@ -43,13 +43,13 @@
   },
 
   "hyprland/workspaces": {
-    "active-only": false,
-    "all-outputs": true,
-    "disable-scroll": false,
+    "format": "{icon}",
     "on-scroll-up": "hyprctl dispatch workspace -1",
     "on-scroll-down": "hyprctl dispatch workspace +1",
-    "format": "{icon}",
     "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 5,
+    },
     "format-icons": {
       "urgent": "",
       "active": "",
@@ -57,6 +57,9 @@
       "empty": "󰧞",
     },
     "sort-by-number": true,
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
   },
 
   "custom/playerctl": {
@@ -93,9 +96,9 @@
       "warning": 10,
       // "critical": 1,
     },
-    "format": "{icon}",
-    "format-charging": "",
-    "format-plugged": "",
+    "format": "{icon}  {capacity}%",
+    "format-charging": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "format-alt": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""],
   },
@@ -120,8 +123,8 @@
   },
 
   "network": {
-    "format-wifi": "󰤨",
-    "format-disconnected": "󰤭",
+    "format-wifi": "󰤨  {essid}",
+    "format-disconnected": "󰤭  Disconnected",
     "tooltip-format": "{essid}",
     "on-click": "bash ~/.config/rofi/network/rofi-network-manager.sh",
   },
@@ -132,7 +135,7 @@
   },
 
   "pulseaudio": {
-    "format": "{icon}", //{volume}%,
+    "format": "{icon} {volume}%",
     "format-muted": "󰝟",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
@@ -154,21 +157,5 @@
     "format": "󰣇",
     "on-click": "bash $HOME/.config/rofi/launchers/type-1/launcher.sh",
     "on-click-right": "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh",
-  },
-
-  "custom/wf-recorder": {
-    "format": "{}",
-    "interval": "once",
-    "exec": "echo ''",
-    "tooltip": "false",
-    "exec-if": "pgrep 'wf-recorder'",
-    "on-click": "exec ./scripts/wlrecord.sh",
-    "signal": 8,
-  },
-
-  "custom/hyprpicker": {
-    "format": "󰈋",
-    "on-click": "hyprpicker -a -f hex",
-    "on-click-right": "hyprpicker -a -f rgb",
   },
 }
