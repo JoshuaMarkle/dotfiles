@@ -8,17 +8,38 @@
   "margin-right": 0,
   "modules-left": ["custom/launcher", "hyprland/workspaces"],
   "modules-center": ["custom/playerlabel"],
-  "modules-right": ["network", "pulseaudio", "battery", "clock", "date"],
+  "modules-right": [
+    "custom/randwall",
+    "network",
+    "pulseaudio",
+    "battery",
+    "clock",
+  ],
 
   // Modules configuration
   "clock": {
-    "format": " {:%H:%M}",
-  },
-
-  "date": {
-    "format": " {:%d/%m}",
-    "tooltip": "true",
-    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    //  
+    "format": "{:%H:%M}",
+    "format-alt": "{:%A, %B %d, %Y (%R)}",
+    "tooltip-format": "<tt><small>{calendar}</small></tt>",
+    "calendar": {
+      "on-scroll": 1,
+      "on-click-right": "mode",
+      "mode-mon-col": 4,
+      "format": {
+        "months": "<span color='#c0caf5'><b>{}</b></span>",
+        "days": "<span color='#565f89'><b>{}</b></span>",
+        "weekdays": "<span color='#565f89'><b>{}</b></span>",
+        "today": "<span color='#7aa2f7'><b>{}</b></span>",
+      },
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-click-forward": "tz_up",
+      "on-click-backward": "tz_down",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+    },
   },
 
   "hyprland/workspaces": {
@@ -57,9 +78,9 @@
     "return-type": "json",
     "max-length": 48,
     "exec": "playerctl -a metadata --format '{\"text\": \"{{markup_escape(title)}}\", \"tooltip\": \"{{playerName}} : {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
-    "on-click-middle": "playerctl play-pause",
-    "on-click": "playerctl previous",
-    "on-click-right": "playerctl next",
+    "on-click": "playerctl play-pause",
+    // "on-click-middle": "playerctl play-pause",
+    // "on-click-right": "playerctl next",
     "format-icons": {
       "Playing": "<span foreground='#c0caf5'>󰒮 󰐌 󰒭</span>",
       "Paused": "<span foreground='#c0caf5'>'>󰒮 󰏥 󰒭</span>",
@@ -69,13 +90,13 @@
   "battery": {
     "states": {
       "good": 95,
-      "warning": 20,
-      "critical": 10,
+      "warning": 10,
+      // "critical": 1,
     },
-    "format": "{icon}  {capacity}%",
-    "format-charging": "{capacity}% ",
-    "format-plugged": "{capacity}% ",
-    "format-alt": "{icon}  {time}",
+    "format": "{icon}",
+    "format-charging": "",
+    "format-plugged": "",
+    "format-alt": "{icon}  {capacity}%",
     "format-icons": ["", "", "", "", ""],
   },
 
@@ -99,8 +120,8 @@
   },
 
   "network": {
-    "format-wifi": "󰤨 ",
-    "format-disconnected": "󰤭 ",
+    "format-wifi": "󰤨",
+    "format-disconnected": "󰤭",
     "tooltip-format": "{essid}",
     "on-click": "bash ~/.config/rofi/network/rofi-network-manager.sh",
   },
@@ -111,30 +132,28 @@
   },
 
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}", //{volume}%,
     "format-muted": "󰝟",
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"],
     },
-    "on-click": "pypr toggle volume",
+    "on-click": "bash ~/.config/rofi/volume/rofi-volume.sh",
     "on-scroll-up": "bash ~/.scripts/volume up",
     "on-scroll-down": "bash ~/.scripts/volume down",
     "scroll-step": 5,
     "on-click-right": "pavucontrol",
+    "tooltip": true,
   },
 
   "custom/randwall": {
     "format": "󰏘",
-    "on-click": "bash $HOME/.config/hypr/randwall.sh",
-    "on-click-right": "bash $HOME/.config/hypr/wall.sh",
+    "on-click": "bash $HOME/.local/bin/randwall.sh",
   },
 
   "custom/launcher": {
     "format": "󰣇",
-    "on-click": "bash $HOME/.config/rofi/launcher.sh",
-    //    "on-click": "wofi --show drun -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css",
-    "on-click-right": "bash $HOME/.config/rofi/run.sh",
-    //    "on-click-right": "wofi --show run -I -a -n -W 500 -H 376 -s ~/.config/wofi/themes/gruvbox.css"
+    "on-click": "bash $HOME/.config/rofi/launchers/type-1/launcher.sh",
+    "on-click-right": "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh",
   },
 
   "custom/wf-recorder": {

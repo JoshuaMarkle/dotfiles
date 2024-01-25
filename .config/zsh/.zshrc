@@ -40,5 +40,8 @@ if [[ -n $TMUX ]]; then
     la && echo
 fi
 
+# Starship
 eval "$(starship init zsh)"
+
+# Default prompt
 # PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '

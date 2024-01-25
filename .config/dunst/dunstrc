@@ -26,13 +26,13 @@
     horizontal_padding = 8
     text_icon_padding = 0
     frame_width = 2
-    frame_color = "#a9b1d6"
+    frame_color = "#a9b1d6aa"
     gap_size = 5
     separator_color = frame
     sort = yes
 
     ### Text ###
-    font = CaskaydiaCoveNerdFont 12
+    font = CaskaydiaCoveNerdFont 10 
     line_height = 0
     markup = full
     format = "<b>%s</b>\n%b"

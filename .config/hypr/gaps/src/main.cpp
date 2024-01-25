@@ -18,7 +18,7 @@ APICALL EXPORT PLUGIN_DESCRIPTION_INFO PLUGIN_INIT(HANDLE handle) {
 
 	// general
 	CONF("gaps_out_single", int, 20);
-	CONF("gaps_out_multi", int, 4);
+	CONF("gaps_out_multi", int, 10);
 #undef CONF
 
 	hooks::enable();
