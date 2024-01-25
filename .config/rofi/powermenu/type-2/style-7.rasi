@@ -39,7 +39,7 @@ window {
     border-radius:               0px;
     border-color:                @selected;
     cursor:                      "default";
-    background-color:            transparent;
+    background-color:            @background;
 }
 
 /*****----- Main Box -----*****/
@@ -52,7 +52,7 @@ mainbox {
     border-radius:               0px;
     border-color:                @selected;
     background-color:            transparent;
-    children:                    [ "message", "listview" ];
+    children:                    [ "listview" ];
 }
 
 /*****----- Inputbar -----*****/
