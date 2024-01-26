@@ -4,7 +4,7 @@
 clear
 
 # Display image with kitty
-kitty +kitten icat --align left --place "20x20@0x0" "/home/josh/downloads/pochita.png"
+kitty +kitten icat --align left --place "20x20@0x0" "$HOME/pictures/fetch/pochita.png"
 
 # Colors
 RED='\033[0;31m'

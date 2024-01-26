@@ -54,7 +54,7 @@ window {
 	text-color:			@foreground;
 	background-color:	@background;
     border:             2px solid;
-    border-radius:      8px;
+    border-radius:      5px;
     border-color:       @bordercolor;
 	padding: 			20;
 	margin:				15;
