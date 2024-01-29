@@ -24,39 +24,39 @@ map p print
 
 set recolor true
 
-set notification-error-bg       "#aa4650" # Dark Red
-set notification-error-fg       "#101216" # Background
-set notification-warning-bg     "#dea93f" # Dark Yellow
-set notification-warning-fg     "#101216" # Background
-set notification-bg             "#101216" # Background
-set notification-fg             "#d6deed" # Foreground
+set notification-error-bg       "#f7768e" # Dark Red
+set notification-error-fg       "#1a1b26" # Background
+set notification-warning-bg     "#ffc777" # Dark Yellow
+set notification-warning-fg     "#1a1b26" # Background
+set notification-bg             "#1a1b26" # Background
+set notification-fg             "#c0caf5" # Foreground
 
-set completion-bg               "#101216" # Background
-set completion-fg               "#d6deed" # Foreground
-set completion-group-bg         "#101216" # Background
-set completion-group-fg         "#d6deed" # Foreground
-set completion-highlight-bg     "#dea93f" # Dark Yellow
+set completion-bg               "#1a1b26" # Background
+set completion-fg               "#c0caf5" # Foreground
+set completion-group-bg         "#1a1b26" # Background
+set completion-group-fg         "#c0caf5" # Foreground
+set completion-highlight-bg     "#ffc777" # Dark Yellow
 set completion-highlight-fg     "#162320" # Background
 
-set index-bg                    "#101216" # Background
-set index-fg                    "#d6deed" # Foreground
-set index-active-bg             "#dea93f" # Dark Yellow 
-set index-active-fg             "#101216" # Background
+set index-bg                    "#1a1b26" # Background
+set index-fg                    "#c0caf5" # Foreground
+set index-active-bg             "#ffc777" # Dark Yellow 
+set index-active-fg             "#1a1b26" # Background
 
-set inputbar-bg                 "#101216" # Background
-set inputbar-fg                 "#d6deed" # Foreground
-set statusbar-bg                "#101216" # Background
-set statusbar-fg                "#d6deed" # Foreground
+set inputbar-bg                 "#1a1b26" # Background
+set inputbar-fg                 "#c0caf5" # Foreground
+set statusbar-bg                "#1a1b26" # Background
+set statusbar-fg                "#c0caf5" # Foreground
 
-set highlight-color             "#dea93f" # Dark Yellow
-set highlight-active-color      "#aa4650" # Dark Red 
+set highlight-color             "#ffc777" # Dark Yellow
+set highlight-active-color      "#f7768e" # Dark Red 
 
-set default-bg                  "#101216" # Background
-set default-fg                  "#d6deed" # Foreground
+set default-bg                  "#1a1b26" # Background
+set default-fg                  "#c0caf5" # Foreground
 
 set render-loading              true
-set render-loading-fg           "#101216" # Background
-set render-loading-bg           "#d6deed" # Foreground
+set render-loading-fg           "#1a1b26" # Background
+set render-loading-bg           "#c0caf5" # Foreground
 
-set recolor-lightcolor          "#101216" # Background
-set recolor-darkcolor           "#d6deed" # Foreground
+set recolor-lightcolor          "#1a1b26" # Background
+set recolor-darkcolor           "#c0caf5" # Foreground
