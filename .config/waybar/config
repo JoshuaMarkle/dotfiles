@@ -1,0 +1,102 @@
+{
+    "layer": "top",
+    "height": 35,
+    "spacing": 5,
+    "modules-left": [
+		"custom/launcher",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "disk",
+        "pulseaudio",
+        "network",
+        "battery",
+        "custom/power"
+    ],
+    // "hyprland/workspaces": {
+    //     "disable-scroll": true,
+    //     "all-outputs": true,
+    //     "on-click": "activate"
+    // },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-scroll-up": "hyprctl dispatch workspace -1",
+    "on-scroll-down": "hyprctl dispatch workspace +1",
+    "on-click": "activate",
+    "persistent-workspaces": {
+      "*": 5,
+    },
+    "sort-by-number": true,
+    "active-only": false,
+    "all-outputs": true,
+    "disable-scroll": false,
+  },
+    "tray": {
+        "spacing": 10
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": " {:%H:%M   %a, %b %d}"
+    },
+    "battery": {
+        "states": {
+            "warning": 10
+        },
+        "format": "{icon} {capacity}%",
+        "format-charging": " {capacity}%",
+        "format-plugged": "󰂄 {capacity}%",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "disk": {
+        "interval": 300,
+        "format": "󰋊 {free}",
+        "path": "/"
+    },
+    "network": {
+        "tooltip": false,
+        "format-wifi": "󰤨 {essid}",
+        "format-disconnected": "󰤭",
+        "format-ethernet": "",
+        "on-click": "bash ~/.config/rofi/network/rofi-network-manager.sh"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰖁 {volume}%",
+        "on-click": "pavucontrol"
+    },
+    "custom/power": {
+        "format": "󰤆",
+        "on-click": "powermenu"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+
+  "custom/launcher": {
+    "format": "󰣇",
+    "on-click": "bash $HOME/.config/rofi/launchers/type-1/launcher.sh",
+    "on-click-right": "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh",
+  },
+}
+// vim: ft=jsonc
