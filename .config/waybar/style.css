@@ -77,7 +77,6 @@ window#waybar {
   margin: 5px 5px 5px 5px;
   border-radius: 16px;
   padding: 0px 5px;
-  /*border-right: solid 1px #282738;*/
 }
 
 #clock {
@@ -87,7 +86,6 @@ window#waybar {
   padding-right: 15px;
   margin-left: 0px;
   font-weight: bold;
-  /*border-left: solid 1px #282738;*/
 }
 
 #battery {

@@ -30,10 +30,10 @@ COLOR_ICON="󰏘"
 userInfo=$(whoami)
 hostnameInfo=$(hostname)
 distroInfo="Arch Linux"
-uptimeInfo=$(uptime -p | sed 's/up //')
+uptimeInfo=$(uptime -p | sed 's/up //;s/,//;s/ hours\?/h/;s/ minutes\?/m/' | awk '{print ($2=="h"&&$3=="")?$0" 0m":($2=="m"&&$1=="up")?"0h "$0:$0}')
 shellInfo=$SHELL
 pkgsInfo=$(pacman -Q | wc -l)
-ramInfo=$(awk '/MemTotal/ {total=$2} /MemAvailable/ {available=$2} END {used=(total-available)/1024; printf "%d | %d MiB\n", used, total/1024}' /proc/meminfo)
+ramInfo=$(awk '/MemTotal/ {total=$2} /MemAvailable/ {available=$2} END {used=(total-available)/1048576; printf "%.1f|%.1f\n", used, total/1048576}' /proc/meminfo)
 
 # Spacing
 spacing="                      " # Make space for image
@@ -42,12 +42,12 @@ spacing="                      " # Make space for image
 echo -e "${spacing}╭───────────╮"
 echo -e "${spacing}│ ${USER_ICON}  user   │ ${RED}$userInfo${NO_COLOR}"
 echo -e "${spacing}│ ${HOSTNAME_ICON}  hname  │ ${YELLOW}$hostnameInfo${NO_COLOR}"
-echo -e "${spacing}│ ${DISTRO_ICON}  distro │ ${GREEN}$distroInfo${NO_COLOR}"
-echo -e "${spacing}│ ${UPTIME_ICON}  uptime │ ${CYAN}$uptimeInfo${NO_COLOR}"
-echo -e "${spacing}│ ${SHELL_ICON}  shell  │ ${BLUE}$(basename $shellInfo)${NO_COLOR}"
-echo -e "${spacing}│ ${PKGS_ICON}  pkgs   │ ${MAGENTA}$pkgsInfo${NO_COLOR}"
-echo -e "${spacing}│ ${RAM_ICON}  memory │ ${RED}$ramInfo${NO_COLOR}"
+echo -e "${spacing}│ ${UPTIME_ICON}  uptime │ ${GREEN}$uptimeInfo${NO_COLOR}"
+echo -e "${spacing}│ ${SHELL_ICON}  shell  │ ${CYAN}$(basename $shellInfo)${NO_COLOR}"
+echo -e "${spacing}│ ${PKGS_ICON}  pkgs   │ ${BLUE}$pkgsInfo${NO_COLOR}"
+echo -e "${spacing}│ ${RAM_ICON}  memory │ ${MAGENTA}$ramInfo${NO_COLOR}"
 echo -e "${spacing}├───────────┤"
-echo -e "${spacing}│ ${COLOR_ICON} colors  │ ${WHITE} ${RED} ${YELLOW} ${GREEN} ${CYAN} ${BLUE} ${MAGENTA} ${NO_COLOR}"
-echo -e "${spacing}╰───────────╯${NO_COLOR}"
+echo -e "${spacing}│ ${COLOR_ICON}  colors │ ${RED} ${YELLOW} ${CYAN} ${BLUE} ${MAGENTA}${NO_COLOR}"
+echo -e "${spacing}╰───────────╯"
+echo
 echo

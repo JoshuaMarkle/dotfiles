@@ -2,16 +2,16 @@
 source ~/.config/zsh/aliases
 
 # Keybinds
-function project_switcher() {
+function sessionizer() {
     ( # Terminal magic to make the script work
         exec </dev/tty
         exec <&1
-    	~/.local/bin/project-switcher.sh
+    	~/.local/bin/sessionizer.sh
     )
     zle reset-prompt
 }
-zle -N project_switcher
-bindkey '^f' project_switcher
+zle -N sessionizer
+bindkey '^f' sessionizer
 
 open_nvim() {
     nvim
