@@ -2,6 +2,9 @@
 
 A solid collection of dotfiles primarily focused around the **Tokyo Night** theme.
 
+![screenshot1](docs/screenshot1.png)
+![screenshot2](docs/screenshot2.png)
+
 ## Support For
 
 - **Hyprland:** Customizable wayland compositor
