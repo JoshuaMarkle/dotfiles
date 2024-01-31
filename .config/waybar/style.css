@@ -1,13 +1,13 @@
-@define-color base   #1a1b26;
-@define-color crust  #1a1b26;
-@define-color surface0 #292e42;
-@define-color text     #c0caf5;
+@define-color base      #1a1b26;
+@define-color highlight #292e42;
+@define-color text      #c0caf5;
 
+@define-color red       #f7768e;
+@define-color orange    #ff9e64;
+@define-color yellow    #ffc777;
+@define-color green     #9ece6a;
 @define-color blue      #7aa2f7;
 @define-color lavender  #bb9af8;
-@define-color green     #9ece6a;
-@define-color yellow    #ffc777;
-@define-color peach     #ff9e64;
 
 * {
   font-family: JetBrainsMono Nerd Font;
@@ -15,7 +15,7 @@
 }
 
 window#waybar {
-  background-color: @crust;
+  background-color: @base;
   color: @text;
   transition-property: background-color;
   transition-duration: 0.5s;
@@ -37,8 +37,8 @@ button {
 /* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
 
 #workspaces button:hover {
-  background: @surface0;
-  border: @surface0;
+  background: @highlight;
+  border: @highlight;
 }
 
 #workspaces button {
@@ -53,12 +53,12 @@ button {
 }
 
 #workspaces button.active {
-  background-color: @surface0;
+  background-color: @highlight;
 }
 
 #workspaces button.urgent {
   background-color: @red;
-  color: @crust;
+  color: @base;
 }
 
 #clock,
@@ -81,7 +81,7 @@ button {
 #mpd {
   padding: 0 12px;
   background-color: @base;
-  color: @crust;
+  color: @base;
   border-radius: 5px;
   margin: 5px 0;
 }
@@ -114,7 +114,7 @@ label:focus {
 }
 
 #disk {
-  color: @peach;
+  color: @orange;
 }
 
 #pulseaudio {
@@ -142,8 +142,7 @@ label:focus {
 }
 
 #battery.warning:not(.charging) {
-  background-color: @red;
-  color: @crust;
+  border: 2px solid @red;
 }
 
 #custom-power {
