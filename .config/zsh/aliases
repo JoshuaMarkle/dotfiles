@@ -21,7 +21,6 @@ alias volume='pactl -- set-sink-volume 0 '
 alias screenshot='grim -g "$(slurp)"'
 
 alias fetch=~/.local/bin/fetch.sh
-alias jupyternotebook=~/.local/bin/pythonstuff/jupyter-notebook
 alias rstudio='/usr/lib/rstudio/rstudio'
 alias r=/usr/bin/R
 alias qemu=qemu-system-x86_64

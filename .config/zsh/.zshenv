@@ -22,10 +22,6 @@ export XDG_CURRENT_SESSION_TYPE=wayland
 export GDK_BACKEND=wayland,x11
 export MOZ_ENABLE_WAYLAND=1
 
-# Flutter
-export ANDROID_HOME=$HOME/tools/android-sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-
 # Fixing paths
 export JAVA_HOME=/usr/bin/java
 export GOPATH=$XDG_DATA_HOME/go
@@ -33,6 +29,9 @@ export CARGO_HOME=$XDG_DATA_HOME/cargo
 export NPM_CONFIG_HOME=$XDG_CONFIG_HOME/npm/npmrc
 export GTK2_RC_FILES=$XDG_DATA_HOME/gtk-2.0/gtkrc
 export ZDOTDIR=$HOME/.config/zsh
+export ANDROID_HOME=$HOME/tools/android-sdk
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:/opt/anaconda/bin
 
 # History
 export HISTSIZE=0

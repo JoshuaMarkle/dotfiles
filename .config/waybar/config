@@ -40,7 +40,7 @@
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": " {:%H:%M   %a, %b %d}"
+        "format": " {:%I:%M   %a, %b %d}"
     },
     "battery": {
         "states": {
