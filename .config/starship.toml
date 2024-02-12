@@ -59,8 +59,9 @@ read_only = " "
 ## SECOND LINE/ROW: Prompt
 # Prompt: param 2 └─
 [character]
-success_symbol = "[](#7aa2f7 bold)"
-error_symbol = "[](#f7768e bold)"
+success_symbol = "[](#7aa2f7)"
+error_symbol = "[](#f7768e)"
+vimcmd_symbol = "[](#9ece6a)" 
 
 [line_break]
 disabled = true

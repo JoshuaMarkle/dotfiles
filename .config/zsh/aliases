@@ -12,14 +12,15 @@ dots() { case "$1" in update) stow -t ~ -d ~/dotfiles -v . ;; *) cd ~/dotfiles ;
 
 alias school="cd ~/school"
 alias compsci="cd ~/school/compsci"
-alias console="cd ~/projects/console"
-alias algotype="cd ~/projects/AlgoType"
+alias multi="cd ~/school/multi"
 
 alias copy="wl-copy"
 alias paste="wl-paste"
 alias volume='pactl -- set-sink-volume 0 '
 alias screenshot='grim -g "$(slurp)"'
 
+alias vi=nvim
+alias vim=nvim
 alias fetch=~/.local/bin/fetch.sh
 alias rstudio='/usr/lib/rstudio/rstudio'
 alias r=/usr/bin/R

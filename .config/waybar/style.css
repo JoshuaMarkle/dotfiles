@@ -42,10 +42,10 @@ button {
 }
 
 #workspaces button {
-  padding: 0 8px;
+  padding: 0 6px;
   color: @text;
   border-radius: 5px;
-  margin: 5px 0 5px 5px;
+  margin: 5px 5px 5px 0px;
 }
 
 #workspaces button.selected {
@@ -79,16 +79,18 @@ button {
 #scratchpad,
 #custom-launcher,
 #mpd {
-  padding: 0 12px;
+  padding: 0 8px;
   background-color: @base;
   color: @base;
   border-radius: 5px;
   margin: 5px 0;
+  margin-bottom: 8px;
 }
 
 #window,
 #workspaces {
   margin: 0 4px;
+  margin-bottom: 2px;
 }
 
 /* If workspaces is the leftmost module, omit left margin */
@@ -117,6 +119,10 @@ label:focus {
   color: @orange;
 }
 
+#temperature {
+  color: @orange;
+}
+
 #pulseaudio {
   color: @yellow;
 }
@@ -129,15 +135,12 @@ label:focus {
   color: @green;
 }
 
-#network.disconnected {
-  color: @overlay1;
-}
-
 #battery {
   color: @blue;
 }
 
 #custom-launcher {
+  margin-left: 5px;
   color: @blue;
 }
 
@@ -146,6 +149,7 @@ label:focus {
 }
 
 #custom-power {
+  margin-right: 5px;
   color: @lavender;
 }
 
