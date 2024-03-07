@@ -20,6 +20,8 @@ map J zoom out
 map i recolor
 map p print
 
+set selection-clipboard clipboard
+
 # --- Colors ---
 
 set recolor true

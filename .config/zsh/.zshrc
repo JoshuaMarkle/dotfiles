@@ -36,9 +36,10 @@ restore_original_prompt() {
 }
 init_transient_prompt
 
-if [[ -n $TMUX ]]; then
-    la && echo
-fi
+# Auto print directory items if in tmux
+# if [[ -n $TMUX ]]; then
+#     la && echo
+# fi
 
 # Starship
 eval "$(starship init zsh)"
