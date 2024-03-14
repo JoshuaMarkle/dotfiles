@@ -33,6 +33,9 @@ export ANDROID_HOME=$HOME/tools/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:/opt/anaconda/bin
 
+# DELETE THIS
+export PATH=$PATH:$HOME/projects/nohatetour
+
 # History
 export HISTSIZE=0
 export HISTFILESIZE=0

@@ -25,3 +25,12 @@ alias fetch=~/.local/bin/fetch.sh
 alias rstudio='/usr/lib/rstudio/rstudio'
 alias r=/usr/bin/R
 alias qemu=qemu-system-x86_64
+
+mode() {
+	case "$1" in
+		focus) rm ~/.config/hypr/hyprland.conf && ln -sf ~/.config/hypr/modes/focused.conf ~/.config/hypr/hyprland.conf ;;
+		f) rm ~/.config/hypr/hyprland.conf && ln -sf ~/.config/hypr/modes/focused.conf ~/.config/hypr/hyprland.conf ;;
+		casual) rm ~/.config/hypr/hyprland.conf && ln -sf ~/.config/hypr/modes/casual.conf ~/.config/hypr/hyprland.conf ;;
+		c) rm ~/.config/hypr/hyprland.conf && ln -sf ~/.config/hypr/modes/casual.conf ~/.config/hypr/hyprland.conf ;;
+	esac
+}
