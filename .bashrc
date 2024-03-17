@@ -26,7 +26,7 @@ source ~/.config/zsh/aliases
 
 # Keybinds
 bind -x '"\C-x":exit'
-bind -x '"\C-f":"~/.local/bin/project_switcher.sh"'
+bind -x '"\C-f":"~/.local/bin/sessionizer.sh"'
 bind -x '"\C-n":"nvim"'
 
 # Modernize prompt
