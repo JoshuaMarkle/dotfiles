@@ -1,0 +1,8 @@
+.git
+.gitignore
+.gitmodules
+
+.stowrc
+
+/docs
+README.md

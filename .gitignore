@@ -1,0 +1,5 @@
+# hyprland plugins
+.config/hypr/gaps/build/
+.config/hypr/gaps/.cache/
+.config/hypr/hyprbars/build/
+.config/hypr/borders/borders.so
