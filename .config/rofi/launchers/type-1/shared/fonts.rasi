@@ -8,5 +8,5 @@
  **/
 
 * {
-    font: "CaskaydiaCoveNerdFont 10";
+    font: "CaskaydiaMonoNerdFont 10";
 }
