@@ -49,9 +49,9 @@ disabled = false
 
 # Third param
 [directory]
-format = "[  ](fg:#7aa2f7 bg:#1a1b26)[$path]($style) "
+format = "[  ](fg:#7aa2f7 bg:none)[$path]($style) "
 # format = "[$path]($style)[ ](fg:#1a1b26 bg:#1a1b26)[](fg:#7aa2f7 bg:#1a1b26)[ ](fg:#1a1b26 bg:#7aa2f7)[](fg:#7aa2f7 bg:none)"
-style = "fg:#c0caf5 bg:#1a1b26 bold"
+style = "fg:#c0caf5 bg:none bold"
 truncation_length = 3
 truncate_to_repo=false
 read_only = " "
