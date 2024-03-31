@@ -55,4 +55,10 @@ sudo pacman -S spotify-launcher
 yay -S pyprland
 ```
 
+Probably should install
+
+```
+libreoffice texlive bluez bluez-utils
+```
+
 And you're all set! Enjoy :)

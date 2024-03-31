@@ -37,8 +37,9 @@ export PATH=$PATH:/opt/anaconda/bin
 export PATH=$PATH:$HOME/projects/nohatetour
 
 # History
-export HISTSIZE=0
-export HISTFILESIZE=0
+export HISTSIZE=10000
+export SAVEHIST=10000
+export HISTFILE=$ZDOTDIR/.zhistory
 export PYTHONSTARTUP=/dev/null
 
 # Scaling

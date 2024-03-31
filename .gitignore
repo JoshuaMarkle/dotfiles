@@ -3,3 +3,6 @@
 .config/hypr/gaps/.cache/
 .config/hypr/hyprbars/build/
 .config/hypr/borders/borders.so
+
+# history
+.config/zsh/.zhistory
