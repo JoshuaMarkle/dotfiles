@@ -11,11 +11,9 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
-# QT5 fix
-export QT_QPA_PLATFORMTHEME=qt5ct
-
 # Wayland fix
 export QT_QPA_PLATFORM=wayland
+export QT_QPA_PLATFORMTHEME=qt5ct
 export XDG_CURRENT_DESKTOP=Hyprland
 export XDG_SESSION_DESKTOP=Hyprland
 export XDG_CURRENT_SESSION_TYPE=wayland
@@ -23,18 +21,20 @@ export GDK_BACKEND=wayland,x11
 export MOZ_ENABLE_WAYLAND=1
 
 # Fixing paths
-export JAVA_HOME=/usr/bin/java
+# export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
 export GOPATH=$XDG_DATA_HOME/go
 export CARGO_HOME=$XDG_DATA_HOME/cargo
 export NPM_CONFIG_HOME=$XDG_CONFIG_HOME/npm/npmrc
 export GTK2_RC_FILES=$XDG_DATA_HOME/gtk-2.0/gtkrc
 export ZDOTDIR=$HOME/.config/zsh
-export ANDROID_HOME=$HOME/tools/android-sdk
-export PATH=$PATH:$ANDROID_HOME/platform-tools
-export PATH=$PATH:/opt/anaconda/bin
+export CHROME_EXECUTABLE=/opt/google/chrome/google-chrome
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$HOME/Android/Sdk
 
-# DELETE THIS
-export PATH=$PATH:$HOME/projects/nohatetour
+export PATH=$PATH:/opt/flutter/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
+export PATH=$PATH:/opt/anaconda/bin
 
 # History
 export HISTSIZE=10000
