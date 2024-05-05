@@ -33,7 +33,7 @@ if [ -z "$yay_installed" ]; then
 fi
 
 # Install yay packages
-yay -S --needed pyprland || exit 1
+yay -S --needed pyprland swww || exit 1
 
 # Extra nice packages
 sudo pacman -S --needed tmux zathura || exit 1
