@@ -27,7 +27,7 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       800px;
+    width:                       450px;
     x-offset:                    0px;
     y-offset:                    0px;
 
@@ -35,8 +35,8 @@ window {
     enabled:                     true;
     margin:                      0px;
     padding:                     0px;
-    border:                      2px solid;
-    border-radius:               10px;
+    border:                      0px;
+    border-radius:               0px;
     border-color:                @border;
     cursor:                      "default";
     background-color:            @background;
@@ -45,9 +45,9 @@ window {
 /*****----- Main Box -----*****/
 mainbox {
     enabled:                     true;
-    spacing:                     15px;
+    spacing:                     0;
     margin:                      0px;
-    padding:                     40px;
+    padding:                     0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
@@ -77,7 +77,7 @@ textbox-prompt-colon {
     enabled:                     true;
     expand:                      false;
     str:                         "";
-    padding:                     12px 16px;
+    padding:                     12px 12px;
     border-radius:               0px;
     background-color:            @urgent;
     text-color:                  @background;
@@ -132,7 +132,7 @@ listview {
     fixed-height:                true;
     fixed-columns:               true;
     
-    spacing:                     15px;
+    spacing:                     0px;
     margin:                      0px;
     padding:                     0px;
     border:                      0px solid;
@@ -148,21 +148,22 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     40px 10px;
+    padding:                     24px 0px;
     border:                      0px solid;
-    border-radius:               10px;
+    border-radius:               0px;
     border-color:                @selected;
-    background-color:            @background-alt;
+    background-color:            @background;
     text-color:                  @foreground;
     cursor:                      pointer;
 }
+
 element-text {
-    font:                        "feather bold 32";
+    font:                        "CaskaydiaMonoNerdFont bold 24";
     background-color:            transparent;
     text-color:                  inherit;
     cursor:                      inherit;
     vertical-align:              0.5;
-    horizontal-align:            0.5;
+    horizontal-align:            0.4;
 }
 element selected.normal {
     background-color:            var(selected);

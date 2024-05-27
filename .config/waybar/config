@@ -1,19 +1,19 @@
 {
 	"layer": "top",
-	"height": 35,
+	"height": 40,
+	"margin-top": 20,
+	"margin-left": 20,
+	"margin-right": 20,
 	"spacing": 5,
 	"modules-left": [
 		"custom/launcher",
 		"hyprland/workspaces"
 	],
-	"modules-center": [
-		"clock"
-	],
 	"modules-right": [
-		"temperature",
-		"pulseaudio",
 		"network",
+		"pulseaudio",
 		"battery",
+		"clock",
 		"custom/power"
 	],
 
@@ -29,6 +29,16 @@
 		"active-only": false,
 		"all-outputs": true,
 		"disable-scroll": false,
+		"format-icons": {
+			"1": "",
+			"2": "",
+			"3": "",
+			"4": "",
+			"5": "",
+			"active": "",
+			"urgent": "",
+			"default": ""
+		},
 	},
 
 	"tray": {
@@ -37,7 +47,7 @@
 
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": " {:%I:%M  󰃭 %a, %b %d}"
+		"format": " {:%I:%M %p} "
 	},
 
 	"battery": {
@@ -85,19 +95,18 @@
 
 	"pulseaudio": {
 		// "scroll-step": 1, // %, can be a float
-		"format": "󰕾 {volume}%",
-		"format-muted": "󰖁 {volume}%",
+		"format": "  {volume}%",
+		"format-muted": "  {volume}%",
 		"on-click": "pavucontrol"
 	},
 	"custom/power": {
-		"format": "󰤆",
+		"format": "⏻",
 		"on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh"
 	},
 
 	"custom/launcher": {
-		"format": "󰣇",
+		"format": "",
 		"on-click": "bash $HOME/.config/rofi/launchers/type-1/launcher.sh",
 		"on-click-right": "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh",
 	},
 }
-// vim: ft=jsonc

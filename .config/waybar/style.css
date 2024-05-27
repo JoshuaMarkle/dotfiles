@@ -1,6 +1,7 @@
 @define-color base      #1a1b26;
 @define-color highlight #292e42;
 @define-color text      #c0caf5;
+@define-color textdark #a9b1d6;
 
 @define-color red       #f7768e;
 @define-color orange    #ff9e64;
@@ -10,55 +11,37 @@
 @define-color lavender  #bb9af8;
 
 * {
-  font-family: CaskaydiaMonoNerdFont;
-  font-size: 13px;
+    font-family: CaskaydiaMonoNerdFont;
+    font-size: 13px;
 }
 
 window#waybar {
-  background-color: @base;
-  color: @text;
-  transition-property: background-color;
-  transition-duration: 0.5s;
-  border-bottom: 2px solid rgba(169, 177, 214, 0.6);
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
+    background-color: @base;
+    color: @text;
+    /* border-bottom: 2px solid rgba(169, 177, 214, 0.6); */
+    margin: 20px;
 }
 
 button {
-  /* Use box-shadow instead of border so the text isn't offset */
-  box-shadow: inset 0 -3px transparent;
-  /* Avoid rounded borders under each button name */
-  border: none;
-  border-radius: 0;
+    /* box-shadow: inset 0 -3px transparent; */
+    border: none;
+    border-radius: 0;
+    padding: 6px;
 }
 
-/* https://github.com/Alexays/Waybar/wiki/FAQ#the-workspace-buttons-have-a-strange-hover-effect */
-
-#workspaces button:hover {
-  background: @highlight;
-  border: @highlight;
-}
-
+#workspaces { margin: 0 0 0 6px; }
 #workspaces button {
-  padding: 0 6px;
-  color: @text;
-  border-radius: 5px;
-  margin: 5px 5px 5px 0px;
+    color: @textdark;
+    padding: 0 4px;
+    margin: 0;
+    transition-duration: 0.1s;
 }
-
-#workspaces button.selected {
-  background-color: @text;
-}
-
-#workspaces button.active {
-  background-color: @highlight;
-}
-
-#workspaces button.urgent {
-  background-color: @red;
-  color: @base;
+#workspaces button * { font-size: 16px; }
+#workspaces button.active { color: @text; }
+#workspaces button.urgent { color: @red; }
+#workspaces button:hover {
+    color: @text;
+    background: @highlight;
 }
 
 #clock,
@@ -79,95 +62,44 @@ button {
 #scratchpad,
 #custom-launcher,
 #mpd {
-  padding: 0 8px;
-  background-color: @base;
-  color: @base;
-  border-radius: 5px;
-  margin: 5px 0;
-  margin-bottom: 8px;
+    color: @text;
+    padding: 0 8px;
+    background-color: @base;
+    color: @base;
+    margin: 5px 0;
+    margin-bottom: 8px;
 }
 
-#window,
-#workspaces {
-  margin: 0 4px;
-  margin-bottom: 2px;
-}
-
-/* If workspaces is the leftmost module, omit left margin */
-.modules-left > widget:first-child > #workspaces {
-  margin-left: 0;
-}
-
-/* If workspaces is the rightmost module, omit right margin */
-.modules-right > widget:last-child > #workspaces {
-  margin-right: 0;
-}
-
-label:focus {
-  background-color: #000000;
-}
-
-#clock {
-  color: @text;
-}
-
-#custom-updates {
-  color: @red;
-}
-
-#disk {
-  color: @orange;
-}
-
-#temperature {
-  color: @orange;
-}
-
-#pulseaudio {
-  color: @yellow;
-}
-
-#pulseaudio.muted {
-  color: @overlay1;
-}
-
-#network {
-  color: @green;
-}
-
-#battery {
-  color: @blue;
+#window {
+    margin: 0;
 }
 
 #custom-launcher {
-  margin-left: 5px;
-  color: @blue;
-}
-
-#battery.warning:not(.charging) {
-  border: 2px solid @red;
+    color: @base;
+    background: @blue;
+    margin: 0;
+    padding: 0 18px 0 12px;
+    font-size: 14px;
 }
 
 #custom-power {
-  margin-right: 5px;
-  color: @lavender;
+    color: @base;
+    background: @blue;
+    margin: 0;
+    padding: 0 18px 0 16px;
+    font-size: 14px;
 }
 
-#keyboard-state > label {
-  padding: 0 5px;
+#clock,
+#disk,
+#temperature,
+#pulseaudio,
+#pulseaudio.muted,
+#network,
+#battery {
+  color: @text;
 }
 
-#keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+#battery.warning:not(.charging) {
+  color: @red;
 }
-
-#scratchpad {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-  background-color: transparent;
-}
-
-/* vim: ft=sass
-*/
