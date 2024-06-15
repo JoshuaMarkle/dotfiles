@@ -49,8 +49,8 @@ disabled = false
 
 # Third param
 [directory]
-format = "[  ](fg:#7aa2f7 bg:none)[$path]($style) "
-# format = "[$path]($style)[ ](fg:#1a1b26 bg:#1a1b26)[](fg:#7aa2f7 bg:#1a1b26)[ ](fg:#1a1b26 bg:#7aa2f7)[](fg:#7aa2f7 bg:none)"
+format = "[  ](fg:#bb9af7 bg:none)[$path]($style) "
+# format = "[$path]($style)[ ](fg:#1a1b26 bg:#1a1b26)[](fg:#bb9af7 bg:#1a1b26)[ ](fg:#1a1b26 bg:#bb9af7)[](fg:#bb9af7 bg:none)"
 style = "fg:#c0caf5 bg:none bold"
 truncation_length = 3
 truncate_to_repo=false
@@ -59,7 +59,7 @@ read_only = " "
 ## SECOND LINE/ROW: Prompt
 # Prompt: param 2 └─
 [character]
-success_symbol = "[](#7aa2f7)"
+success_symbol = "[](#bb9af7)"
 error_symbol = "[](#f7768e)"
 vimcmd_symbol = "[](#9ece6a)" 
 
