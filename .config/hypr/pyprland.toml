@@ -14,7 +14,7 @@ size = "80% 80%"
 unfocus = "hide"
 
 [scratchpads.music]
-command = "spotify-launcher"
+command = "spotify"
 animation = "fromBottom"
 size = "80% 80%"
 unfocus = "hide"
