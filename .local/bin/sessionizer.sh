@@ -16,7 +16,7 @@ else
         formatted_name=$(basename "$dir" | tr . _)
         dir_map["$formatted_name"]=$dir
         directories+=$formatted_name$'\n'
-    done < <(find ~/dotfiles/.config ~/Projects ~/School/CompSci ~/dotfiles/.local -mindepth 1 -maxdepth 1 -type d)
+    done < <(find ~/dotfiles/.config ~/projects ~/school/compsci ~/dotfiles/.local -mindepth 1 -maxdepth 1 -type d)
 
     final_list=$(echo -e "${tmux_sessions}\n$(echo -e "$directories" | grep -vFx -f <(echo "$tmux_sessions" | sed 's/\x1b\[[0-9;]*m//g' | sed 's/!$//'))")
     selected=$(echo -e "${final_list}" | fzf --ansi)

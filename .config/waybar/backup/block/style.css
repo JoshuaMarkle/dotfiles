@@ -78,7 +78,7 @@ button {
     color: @base;
     background: @blue;
     margin: 0;
-    padding: 0 15px 0 10px;
+    padding: 0 18px 0 12px;
     font-size: 14px;
 }
 
@@ -86,7 +86,7 @@ button {
     color: @base;
     background: @blue;
     margin: 0;
-    padding: 0 14px 0 12px;
+    padding: 0 18px 0 16px;
     font-size: 14px;
 }
 
@@ -97,9 +97,9 @@ button {
 #pulseaudio.muted,
 #network,
 #battery {
-    color: @text;
+  color: @text;
 }
 
 #battery.warning:not(.charging) {
-    color: @red;
+  color: @red;
 }

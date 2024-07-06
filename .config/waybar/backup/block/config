@@ -1,7 +1,7 @@
 {
 	"layer": "top",
-	"height": 20,
-	"margin-top": 10,
+	"height": 40,
+	"margin-top": 20,
 	"margin-left": 20,
 	"margin-right": 20,
 	"spacing": 5,
