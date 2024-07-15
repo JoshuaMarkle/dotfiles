@@ -3,7 +3,7 @@
 # JoshuaMarkle Dotfiles Install Script
 
 # Update & download required packages
-sudo pacman -Syu &&
+sudo pacman -Syu || exit 1
 sudo pacman -S --needed zsh fzf exa git stow firefox dunst waybar rofi || exit 1
 sudo pacman -S --needed wl-clipboard unzip npm || exit 1 # Neovim required packages
 
