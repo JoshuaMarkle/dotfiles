@@ -10,8 +10,9 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
-		"network",
+		"temperature",
 		"pulseaudio",
+		"network",
 		"battery",
 		"clock",
 		"custom/power"

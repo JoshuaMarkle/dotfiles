@@ -27,14 +27,14 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       450px;
+    width:                       500px;
     x-offset:                    0px;
     y-offset:                    0px;
 
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
-    padding:                     0px;
+    padding:                     10px;
     border:                      0px;
     border-radius:               0px;
     border-color:                @border;
@@ -148,7 +148,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     24px 0px;
+    padding:                     30px 0px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;

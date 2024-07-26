@@ -30,6 +30,7 @@ export ZDOTDIR=$HOME/.config/zsh
 export CHROME_EXECUTABLE=/opt/google/chrome/google-chrome
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$HOME/Android/Sdk
+export TEXINPUTS=$HOME/sync/notes/latex:$TEXINPUTS:
 
 export PATH=$PATH:/opt/flutter/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools

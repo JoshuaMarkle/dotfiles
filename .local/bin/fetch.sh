@@ -28,7 +28,7 @@ COLOR_ICON="󰏘"
 
 # System Information Gathering
 userInfo=$(whoami)
-hostnameInfo=$(hostname)
+hostnameInfo=$(uname -r)
 distroInfo="Arch Linux"
 uptimeInfo=$(uptime -p | sed 's/up //;s/,//;s/ hours\?/h/;s/ minutes\?/m/' | awk '{print ($2=="h"&&$3=="")?$0" 0m":($2=="m"&&$1=="up")?"0h "$0:$0}')
 shellInfo=$SHELL
