@@ -9,15 +9,27 @@ plugins = [
 
 [scratchpads.term]
 command = "kitty --class kitty-scratch"
+class="kitty-scratch"
 animation = "fromBottom"
-size = "80% 80%"
+size = "60% 60%"
+margin = "18%"
 unfocus = "hide"
 
 [scratchpads.music]
 command = "spotify"
 animation = "fromBottom"
 size = "80% 80%"
+margin = "8%"
 unfocus = "hide"
+
+[scratchpads.volume]
+animation = "fromBottom"
+command = "pavucontrol"
+class = "org.pulseaudio.pavucontrol"
+size = "60% 60%"
+margin = "18%"
+unfocus = "hide"
+lazy = true
 
 # [monitors]
 # unknown = "wlrlui"
