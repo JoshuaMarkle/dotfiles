@@ -32,7 +32,7 @@ else
 			directories+=$formatted_name$'\n'
 		fi
 
-	done < <(find ~/sync/projects ~projects ~/dotfiles/.config ~/dotfiles/.local -mindepth 1 -maxdepth 1 -type d)
+	done < <(find ~/sync/projects ~/projects ~/dotfiles/.config ~/dotfiles/.local -mindepth 1 -maxdepth 1 -type d)
 
     final_list=$(echo -e "${tmux_sessions}\n$(echo -e "$directories" | grep -vFx -f <(echo "$tmux_sessions" | sed 's/\x1b\[[0-9;]*m//g' | sed 's/!$//'))")
     selected=$(echo -e "${final_list}" | fzf --ansi)
