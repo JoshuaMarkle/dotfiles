@@ -1,17 +1,18 @@
 {
 	"layer": "top",
 	"height": 20,
-	"margin-top": 20,
-	"margin-left": 20,
-	"margin-right": 20,
+	"margin-top": 0,
+	"margin-left": 0,
+	"margin-right": 0,
 	"spacing": 5,
 	"modules-left": [
 		"custom/launcher",
 		"hyprland/workspaces"
 	],
 	"modules-right": [
-		"network",
+		"temperature",
 		"pulseaudio",
+		"network",
 		"battery",
 		"clock",
 		"custom/power"
@@ -47,7 +48,8 @@
 
 	"clock": {
 		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-		"format": " {:%I:%M %p} "
+		"format": "󰃭 {:%a %b %d, %Y   %I:%M %p}",
+		"format-alt": " {:%I:%M %p} "
 	},
 
 	"battery": {

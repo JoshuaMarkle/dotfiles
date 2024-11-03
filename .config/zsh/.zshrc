@@ -45,7 +45,7 @@ fi
 eval "$(starship init zsh)"
 
 # Python version manager
-eval "$(pyenv init --path)"
+# eval "$(pyenv init --path)"
 
 # Default prompt
 # PROMPT='%F{blue}  %B%F{white}%~%b %F{blue}%f '
