@@ -16,7 +16,8 @@ margin = "50%"
 animation = ""
 
 [scratchpads.music]
-command = "spotify"
+command = "spotify-launcher"
+class = "spotify"
 # animation = "fromBottom"
 size = "80% 80%"
 margin = "8%"
