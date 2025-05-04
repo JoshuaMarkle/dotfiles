@@ -48,8 +48,16 @@ git submodule update --init --recursive
 
 ## Things to Install
 
+General:
+
 ```
-git neovim kitty tmux fzf zathura rofi-wayland
+git kitty tmux zathura rofi-wayland starship exa python
+```
+
+Neovim:
+
+```
+neovim tree-sitter fzf ripgrep python-neovim npm
 ```
 
 And you're all set! Enjoy :)
