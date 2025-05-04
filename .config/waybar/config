@@ -50,7 +50,7 @@
 	"clock": {
 		"tooltip": true,
 		"tooltip-format": "{}",
-		"format": "󰃭 {:%m/%d/%y}",
+		"format": "󰃭 {:%B %d}",
 		"interval": 1
 	},
 
