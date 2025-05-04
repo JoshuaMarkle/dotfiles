@@ -1,7 +1,6 @@
 {
-	"position": "bottom",
 	"layer": "top",
-	"height": 10,
+	"height": 20,
 	"margin-top": 0,
 	"margin-left": 0,
 	"margin-right": 0,
@@ -11,11 +10,11 @@
 		"hyprland/workspaces"
 	],
 	"modules-right": [
+		"temperature",
 		"pulseaudio",
 		"network",
 		"battery",
 		"clock",
-		"custom/time",
 		"custom/power"
 	],
 
@@ -48,19 +47,10 @@
 	},
 
 	"clock": {
-		"tooltip": true,
-		"tooltip-format": "{}",
-		"format": "󰃭 {:%m/%d/%y}",
-		"interval": 1
+		"tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+		"format": "󰃭 {:%a %b %d, %Y   %I:%M %p}",
+		"format-alt": " {:%I:%M %p} "
 	},
-
-	"custom/time": {
-		"exec": "date '+ %I:%M %p'",
-		"interval": 1,
-		"format": "{}",
-		"tooltip": false
-	},
-
 
 	"battery": {
 		"states": {
@@ -111,7 +101,6 @@
 		"format-muted": "  {volume}%",
 		"on-click": "pavucontrol"
 	},
-
 	"custom/power": {
 		"format": "⏻",
 		"on-click": "~/.config/rofi/powermenu/type-2/powermenu.sh"
@@ -119,9 +108,7 @@
 
 	"custom/launcher": {
 		"format": "",
-		"tooltip": true,
-		"tooltip-format": "{}",
-		"exec": "bash -c 'cat /tmp/chatgpt_output_short.txt || echo \"No output yet\"'",
-		"interval": 1
-	}
+		"on-click": "bash $HOME/.config/rofi/launchers/type-1/launcher.sh",
+		"on-click-right": "bash $HOME/.config/rofi/powermenu/type-2/powermenu.sh",
+	},
 }

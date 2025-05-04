@@ -1,9 +1,9 @@
 alias cr=clear
 cda() { cd "$@" && exa -a --icons; }
 
-alias ls="exa --icons"
-alias la="exa -a --icons"
-alias lt="exa --tree"
+alias ls="exa --icons --group-directories-first"
+alias la="exa -a --icons --group-directories-first"
+alias lt="exa --tree --group-directories-first"
 alias ..="cd .."
 alias ...="cd ../.."
 alias ....="cd ../../.."

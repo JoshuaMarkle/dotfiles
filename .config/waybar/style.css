@@ -1,32 +1,39 @@
-@define-color base      #1a1b26;
-@define-color highlight #292e42;
-@define-color text      #c0caf5;
-@define-color textdark #a9b1d6;
+@define-color base      #101319;
+@define-color highlight #171B24;
+@define-color text      #F4F3EE;
+@define-color textdark  #3A435A;
 
-@define-color red       #f7768e;
-@define-color orange    #ff9e64;
-@define-color yellow    #ffc777;
-@define-color green     #9ece6a;
-@define-color blue      #7aa2f7;
-@define-color lavender  #bb9af8;
+@define-color red       #E34F4F;
+@define-color orange    #e37e4f;
+@define-color yellow    #E3C94F;
+@define-color green     #7CC47C;
+@define-color blue      #5599E2;
+@define-color purple  #956dca;
 
 * {
     font-family: CaskaydiaMonoNerdFont;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 window#waybar {
     background-color: @base;
-    color: @text;
-    /* border-bottom: 2px solid rgba(169, 177, 214, 0.6); */
-    margin: 20px;
+    color: @red;
+    margin: 0px;
+	padding: 0;
+	border-top: 1px solid @textdark;
+}
+
+tooltip,
+tooltip * {
+	background-color: rgba(0, 0, 0, 0.5);
+	padding: 0;
+	margin: 0;
 }
 
 button {
-    /* box-shadow: inset 0 -3px transparent; */
     border: none;
     border-radius: 0;
-    padding: 6px;
+	font-size: 16px;
 }
 
 #workspaces { margin: 0 0 0 6px; }
@@ -36,15 +43,16 @@ button {
     margin: 0;
     transition-duration: 0.1s;
 }
-#workspaces button * { font-size: 16px; }
+
 #workspaces button.active { color: @text; }
-#workspaces button.urgent { color: @red; }
+#workspaces button.urgent { color: @orange; }
 #workspaces button:hover {
     color: @text;
     background: @highlight;
 }
 
 #clock,
+#custom-time,
 #battery,
 #cpu,
 #memory,
@@ -63,11 +71,12 @@ button {
 #custom-launcher,
 #mpd {
     color: @text;
-    padding: 0 8px;
-    background-color: @base;
+    padding: 4px 8px;
+    background-color: @highlight;
     color: @base;
     margin: 5px 0;
-    margin-bottom: 8px;
+    margin-bottom: 4px;
+	border-radius: 6px;
 }
 
 #window {
@@ -75,31 +84,25 @@ button {
 }
 
 #custom-launcher {
-    color: @base;
-    background: @blue;
+    color: @text;
+    background-color: transparent;
     margin: 0;
-    padding: 0 16px 0 10px;
-    font-size: 14px;
+    padding: 0 6px 0 12px;
 }
 
 #custom-power {
-    color: @base;
-    background: @blue;
+	font-size: 10px;
+    background-color: transparent;
+    color: @text;
     margin: 0;
-    padding: 0 15px 0 12px;
-    font-size: 14px;
+    padding: 0 16px 0 8px;
 }
 
-#clock,
-#disk,
-#temperature,
-#pulseaudio,
-#pulseaudio.muted,
-#network,
-#battery {
-  color: @text;
-}
-
-#battery.warning:not(.charging) {
-  color: @red;
-}
+#custom-time { color: @red; }
+#clock { color: @orange; }
+#battery { color: @green; }
+#battery.warning:not(.charging) { color: @red; }
+#pulseaudio { color: @purple; }
+#pulseaudio.muted { color: @purple; }
+#network { color: @blue; }
+#temperature { color: @red; }
