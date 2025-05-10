@@ -1,14 +1,14 @@
 @define-color base      #101319;
 @define-color highlight #171B24;
-@define-color text      #F4F3EE;
-@define-color textdark  #3A435A;
+@define-color text      #dadff2;
+@define-color textdark  #565f89;
 
-@define-color red       #E34F4F;
-@define-color orange    #e37e4f;
-@define-color yellow    #E3C94F;
-@define-color green     #7CC47C;
-@define-color blue      #5599E2;
-@define-color purple  #956dca;
+@define-color red       #f7768e;
+@define-color orange    #ff9e64;
+@define-color yellow    #e0af68;
+@define-color green     #9ece6a;
+@define-color blue      #7aa2f7;
+@define-color purple    #bb9af7;
 
 * {
     font-family: CaskaydiaMonoNerdFont;
@@ -76,7 +76,7 @@ button {
     color: @base;
     margin: 5px 0;
     margin-bottom: 4px;
-	border-radius: 6px;
+	border-radius: 4px;
 }
 
 #window {

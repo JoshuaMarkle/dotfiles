@@ -1,39 +1,9 @@
-## ░█▀▀░▀█▀░█▀█░█▀▄░█▀▀░█░█░▀█▀░█▀█
-## ░▀▀█░░█░░█▀█░█▀▄░▀▀█░█▀█░░█░░█▀▀
-## ░▀▀▀░░▀░░▀░▀░▀░▀░▀▀▀░▀░▀░▀▀▀░▀░░
-## CROSS-SHELL PROMPT
-## The minimal, blazing-fast, and infinitely customizable prompt for any shell!
-
-# format = """
-# $hostname\
-# $directory\
-#
-# $localip\
-# $shlvl\
-# $singularity\
-# $kubernetes\
-# $vcsh\
-# $hg_branch\
-# $docker_context\
-# $package\
-# $custom\
-#
-# $sudo\
-#
-# $fill\
-# $git_branch\
-# $git_status\
-# $git_commit\
-# $cmd_duration\
-# $jobs\
-# $battery\
-# $time\
-# $status\
-# $os\
-# $container\
-# $character
-# $shell
-# """
+#  ███████╗████████╗ █████╗ ██████╗ ███████╗██╗  ██╗██╗██████╗ 
+#  ██╔════╝╚══██╔══╝██╔══██╗██╔══██╗██╔════╝██║  ██║██║██╔══██╗
+#  ███████╗   ██║   ███████║██████╔╝███████╗███████║██║██████╔╝
+#  ╚════██║   ██║   ██╔══██║██╔══██╗╚════██║██╔══██║██║██╔═══╝ 
+#  ███████║   ██║   ██║  ██║██║  ██║███████║██║  ██║██║██║     
+#  ╚══════╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝╚═╝  ╚═╝╚═╝╚═╝     
 
 format = "$directory$character$shell"
 right_format = "$git_branch$git_status"
@@ -44,14 +14,13 @@ add_newline = false
 # Second param
 [hostname]
 ssh_only = true 
-format = "[](fg:#101319 bg:none)[█](fg:#f4f3ee bg:#101319)[$ssh_symbol$hostname](bold bg:#f4f3ee)[](fg:#f4f3ee bg:none) "
+format = "[](fg:#101319 bg:none)[█](fg:#dadff2 bg:#101319)[$ssh_symbol$hostname](bold bg:#dadff2)[](fg:#dadff2 bg:none) "
 disabled = false
 
 # Third param
 [directory]
-format = "[  ](fg:#5599e2 bg:none)[$path]($style) "
-# format = "[$path]($style)[ ](fg:#101319 bg:#101319)[](fg:#5599e2 bg:#101319)[ ](fg:#101319 bg:#5599e2)[](fg:#5599e2 bg:none)"
-style = "fg:#f4f3ee bg:none bold"
+format = "[  ](fg:#7aa2f7 bg:none)[$path]($style) "
+style = "fg:#dadff2 bg:none bold"
 truncation_length = 3
 truncate_to_repo=false
 read_only = " "
@@ -59,7 +28,7 @@ read_only = " "
 ## SECOND LINE/ROW: Prompt
 # Prompt: param 2 └─
 [character]
-success_symbol = "[](#5599e2)"
+success_symbol = "[](#7aa2f7)"
 error_symbol = "[](#e34f4f)"
 vimcmd_symbol = "[](#7cc47c)" 
 
@@ -72,28 +41,28 @@ style = 'bold green'
 
 [cmd_duration]
 min_time = 1
-format = "[](fg:#101319 bg:none)[$duration]($style)[](fg:#101319 bg:#101319)[](fg:#956dca bg:#101319)[󱑂 ](fg:#101319 bg:#956dca)[](fg:#956dca bg:none)"
+format = "[](fg:#101319 bg:none)[$duration]($style)[](fg:#101319 bg:#101319)[](fg:#bb8af7 bg:#101319)[󱑂 ](fg:#101319 bg:#bb8af7)[](fg:#bb8af7 bg:none)"
 disabled = false
-style = "fg:#f4f3ee bg:#101319 bold"
+style = "fg:#dadff2 bg:#101319 bold"
 
 
 [git_branch]
-format = "[$symbol$branch](fg:#f4f3ee bg:none) "
+format = "[$symbol$branch](fg:#dadff2 bg:none) "
 symbol = " "
 
 [git_status]
 format="$all_status$ahead_behind "
-style = "fg:#F4F3EE bg:#101319"
+style = "fg:#dadff2 bg:#101319"
 conflicted = "="
-ahead =	"[⇡${count}](fg:#7CC47C bg:none)"
-behind = "[⇣${count}](fg:#E34F4F bg:none)"
+ahead =	"[⇡${count}](fg:#9ece6a bg:none)"
+behind = "[⇣${count}](fg:#db4b4b bg:none)"
 diverged = "⇡${ahead_count}⇣${behind_count}"
-untracked = "[?${count}](fg:#5599E2 bg:none)"
+untracked = "[?${count}](fg:#7aa2f7 bg:none)"
 stashed = "*"
 modified = "[!${count}](fg:#ff9e64)"
-staged = "[+${count}](fg:#7CC47C bg:none)"
-renamed = "[~${count}](fg:#5599E2 bg:none)"
-deleted = "[-${count}](fg:#E34F4F bg:none)"
+staged = "[+${count}](fg:#9ece6a bg:none)"
+renamed = "[~${count}](fg:#7aa2f7 bg:none)"
+deleted = "[-${count}](fg:#db4b4b bg:none)"
 
 [git_commit]
 format = "[\\($hash\\)]($style) [\\($tag\\)]($style)"
