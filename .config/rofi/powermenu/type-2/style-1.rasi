@@ -34,13 +34,8 @@ window {
     /* properties for all widgets */
     enabled:                     true;
     margin:                      0px;
-<<<<<<< HEAD
     padding:                     0px;
     border:                      2px;
-=======
-    padding:                     10px;
-    border:                      0px;
->>>>>>> 822dc526 (state)
     border-radius:               0px;
     border-color:                @border;
     cursor:                      "default";
@@ -97,14 +92,13 @@ prompt {
 
 /*****----- Message -----*****/
 message {
-    font:                        "CaskaydiaMonoNerdFont bold 24";
     enabled:                     true;
     margin:                      0px;
     padding:                     12px;
     border:                      0px solid;
     border-radius:               0px;
     border-color:                @selected;
-    background-color:            @background;
+    background-color:            @background-alt;
     text-color:                  @foreground;
 }
 textbox {

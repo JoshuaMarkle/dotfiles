@@ -1,14 +1,10 @@
 {
 	"position": "bottom",
 	"layer": "top",
-<<<<<<< HEAD
 	"height": 10,
 	"margin-top": 0,
 	"margin-left": 0,
 	"margin-right": 0,
-=======
-	"height": 20,
->>>>>>> 822dc526 (state)
 	"spacing": 5,
 	"modules-left": [
 		"custom/launcher",
