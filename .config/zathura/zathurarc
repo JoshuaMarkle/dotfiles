@@ -37,7 +37,7 @@ set completion-bg               "#101319" # Background
 set completion-fg               "#dadff2" # Foreground
 set completion-group-bg         "#101319" # Background
 set completion-group-fg         "#dadff2" # Foreground
-set completion-highlight-bg     "#e0af68" # Dark Yellow
+set completion-highlight-bg     "#e0af6855" # Dark Yellow
 set completion-highlight-fg     "#162320" # Background
 
 set index-bg                    "#101319" # Background
