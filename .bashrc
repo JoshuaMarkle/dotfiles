@@ -15,7 +15,8 @@ export TEXMFVAR="/var/lib/texmf"
 export ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
-export FZF_DEFAULT_OPTS="--height=100% --reverse --color=bg+:#101319,bg:#101319,border:#101319,spinner:#9ece6a,hl:#ff007c,fg:#dadff2,header:#dadff2,info:#9ece6a,pointer:#ff007c,marker:#db4b4b,fg+:#3b4261,preview-bg:#1a1b26,prompt:#7aa2f7,hl+:#9ece6a"
+export FZF_DEFAULT_OPTS="--height=100% --reverse \
+--color=bg+:#FAFBFC,bg:#FAFBFC,border:#E9EAEB,spinner:#13BBB7,hl:#FF5C56,fg:#565869,header:#565869,info:#2DAE58,pointer:#FF5C56,marker:#FF5C56,fg+:#2DAE58,preview-bg:#F3F4F5,prompt:#09A1ED,hl+:#2DAE58"
 
 export PATH=/opt/cuda/bin:$PATH
 export LD_LIBRARY_PATH=/opt/cuda/lib64:$LD_LIBRARY_PATH

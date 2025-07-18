@@ -52,4 +52,5 @@ export PYTHONSTARTUP=/dev/null
 
 # Misc
 export TEXMFVAR="/var/lib/texmf"
-export FZF_DEFAULT_OPTS="--height=100% --reverse --color=bg+:#101319,bg:#101319,border:#101319,spinner:#7cc47c,hl:#e34f4f,fg:#f4f3ee,header:#f4f3ee,info:#7cc47c,pointer:#e34f4f,marker:#de3b3b,fg+:#3a435a,preview-bg:#1a1b26,prompt:#5599e2,hl+:#7cc47c"
+export FZF_DEFAULT_OPTS="--height=100% --reverse \
+--color=bg+:#FAFBFC,bg:#FAFBFC,border:#E9EAEB,spinner:#13BBB7,hl:#FF5C56,fg:#565869,header:#565869,info:#2DAE58,pointer:#FF5C56,marker:#FF5C56,fg+:#2DAE58,preview-bg:#F3F4F5,prompt:#09A1ED,hl+:#2DAE58"

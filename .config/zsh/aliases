@@ -10,9 +10,6 @@ alias ....="cd ../../.."
 
 dots() { case "$1" in update) stow -t ~ -d ~/dotfiles -v . ;; *) cd ~/dotfiles ;; esac }
 
-alias school="cd ~/School"
-alias compsci="cd ~/School/CompSci"
-
 alias copy="wl-copy"
 alias paste="wl-paste"
 alias volume='pactl -- set-sink-volume 0 '
@@ -26,6 +23,7 @@ alias rstudio='/usr/lib/rstudio/rstudio'
 alias r=/usr/bin/R
 alias audacity='GDK_BACKEND=x11 audacity'
 alias qemu=qemu-system-x86_64
+alias davinci="QT_QPA_PLATFORM=xcb davinci-resolve"
 
 mode() {
 	case "$1" in
