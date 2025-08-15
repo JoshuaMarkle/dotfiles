@@ -11,14 +11,16 @@ export XDG_CONFIG_HOME="$HOME"/.config
 export XDG_CACHE_HOME="$HOME"/.cache
 export XDG_DATA_HOME="$HOME"/.local/share
 
-# Wayland fix
-export QT_QPA_PLATFORM=wayland
-export QT_QPA_PLATFORMTHEME=qt5ct
-export XDG_CURRENT_DESKTOP=Hyprland
-export XDG_SESSION_DESKTOP=Hyprland
-export XDG_CURRENT_SESSION_TYPE=wayland
-export GDK_BACKEND=wayland,x11
-export MOZ_ENABLE_WAYLAND=1
+# Wayland fix (if using wayland)
+if [ "$XDG_SESSION_TYPE" = "wayland" ] && [ "$XDG_CURRENT_DESKTOP" = "Hyprland" ]; then
+    export QT_QPA_PLATFORM=wayland
+    export QT_QPA_PLATFORMTHEME=qt5ct
+    export XDG_CURRENT_DESKTOP=Hyprland
+    export XDG_SESSION_DESKTOP=Hyprland
+    export XDG_CURRENT_SESSION_TYPE=wayland
+    export GDK_BACKEND=wayland,x11
+    export MOZ_ENABLE_WAYLAND=1
+fi
 
 # Fixing paths
 # export JAVA_HOME=/usr/lib/jvm/java-22-openjdk
